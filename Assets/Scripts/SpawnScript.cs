@@ -34,7 +34,7 @@ public class SpawnScript : MonoBehaviour {
 This method is called when the game starts and is used to spawn a piece of
 trash for the player to sort at the begining of the game.
 */ 
-	void Start ()
+	public void Start ()
 	{
 		Spawner ();	
 	}

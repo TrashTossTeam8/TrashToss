@@ -22,7 +22,7 @@ trash, if so call method from GameScore and update the score.
 
 		if (trashObject.GetComponent<Collider>().tag == "Compost T") 
 		{
-			GameScore.playerScore++; //increments player score by 1
+			GameScore.playerScore++;
 		} 
 
 	}

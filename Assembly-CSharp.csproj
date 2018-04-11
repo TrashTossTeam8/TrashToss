@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AC796579-0C5A-D2CC-FA98-AC1DB9278F85}</ProjectGuid>
+    <ProjectGuid>{85059C8B-F038-C847-DE49-2BEA22626F7E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,11 +55,13 @@
      <Compile Include="Assets\Scripts\DestroyC.cs" />
      <Compile Include="Assets\Scripts\DestroyL.cs" />
      <Compile Include="Assets\Scripts\DestroyR.cs" />
+     <Compile Include="Assets\Scripts\GameManagment.cs" />
      <Compile Include="Assets\Scripts\GameScore.cs" />
      <Compile Include="Assets\Scripts\LandFillScore.cs" />
      <Compile Include="Assets\Scripts\RecycleScore.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\Scripts\Throw.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>

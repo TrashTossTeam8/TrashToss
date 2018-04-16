@@ -36,7 +36,7 @@ git pull origin master       //this pulls code FROM master TO whatever branch yo
 //ALWAYS pull before you push (make sure to add and commit first) to avoid overriding data
 git push                     //push to your branch
 ```
-* order of operations:   	 add -> commit -> pull -> push
+* order of operations:   	 add -> commit -> pull -> push -> Log onto GitHub website -> compare and pull request -> merge -> pull from terminal
 
 ### see status of files modified
 ```

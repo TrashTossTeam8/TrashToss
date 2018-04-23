@@ -32,7 +32,7 @@ public class Throw : MonoBehaviour
     public SpawnScript spawn;
 
     public Timer clock;
-    
+
 
     /// <summary>
     /// These three force variables are used to calculate the arc of the throw in each dimension.
@@ -50,7 +50,7 @@ public class Throw : MonoBehaviour
     /// Trash object reference.
     /// </summary>
     public Rigidbody trash;
-    
+
 
     /*
     This method is called when the user clicks down on their mouse on the object
@@ -82,16 +82,23 @@ public class Throw : MonoBehaviour
     */
     void throwBall()
     {
+
+        //Distance Formula that measures the length of the user's finger swipe
+        double distance = (Mathf.Sqrt(Mathf.Pow(endPos.x - startPos.x, 2) + Mathf.Pow(endPos.y - startPos.y, 2)));
+
+
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
         XaxisForce = endPos.x - startPos.x;
         YaxisForce = endPos.y - startPos.y;
-        ZaxisForce = endTime - startTime;
+        ZaxisForce = (endTime - startTime) * ((float)distance / 15);
 
         Debug.Log("Force: " + ZaxisForce);
 
+
+
         //The final arc calculation that governs the throw of the trash object.
-        calculatedForce = new Vector3(XaxisForce/10, YaxisForce/15, (ZaxisForce/20) * 50f) * Time.DeltaTime;
-        
+        calculatedForce = new Vector3(XaxisForce / 10, YaxisForce / 15, (ZaxisForce / 300) * 50f);
+
         //Applies gravity and the calculated arc to the trash object
         trash.useGravity = true;
         trash.velocity = calculatedForce;
@@ -101,7 +108,7 @@ public class Throw : MonoBehaviour
 
         //Calls the wait a second funciton
         StartCoroutine(waitASecond());
-        
+
     }
 
     //Function that pauses for a second before spawning a new ball

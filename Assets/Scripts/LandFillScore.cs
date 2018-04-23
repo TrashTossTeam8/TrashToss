@@ -17,6 +17,7 @@ using this variable we can check whether or not the user correctly sorted
 trash, if so call method from GameScore and update the score.
 */
 
+        //LOOOOOOOOL
 	void OnTriggerEnter(Collider trashObject)
 	{
 

@@ -1,0 +1,115 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/*
+This class is used to allow the user to throw the object
+that this script is attatched to. When the player drags a
+piece of trash to throw it, this class should give a intuitive 
+feel to the physics controlling the trash.
+*/
+
+public class Throw : MonoBehaviour
+{
+    /// <summary>
+    /// Holds the time from when the users presses down on the trash object
+    /// </summary>
+    private float startTime;
+    /// <summary>
+    /// Holds the time from when the user lifts their finger from the trash object
+    /// </summary>
+    private float endTime;
+
+    /// <summary>
+    /// Holds the screen coordinates of the user's finger at the start of the throw
+    /// </summary>
+    public Vector2 startPos;
+    /// <summary>
+    /// Holds the screen coordinates of the user's finger once they left their finger from the trash object
+    /// </summary>
+    public Vector2 endPos;
+
+    public SpawnScript spawn;
+
+    public Timer clock;
+    
+
+    /// <summary>
+    /// These three force variables are used to calculate the arc of the throw in each dimension.
+    /// </summary>
+    private float XaxisForce;
+    private float YaxisForce;
+    private float ZaxisForce;
+
+    /// <summary>
+    /// The calculated product of the three force variables that determines the arc of the thrown object.
+    /// </summary>
+    private Vector3 calculatedForce;
+
+    /// <summary>
+    /// Trash object reference.
+    /// </summary>
+    public Rigidbody trash;
+    
+
+    /*
+    This method is called when the user clicks down on their mouse on the object
+    that this script is attatched to. All it does is keep track of the position of the user's finger
+    and the time of when they first pressed the screen.
+    */
+    void OnMouseDown()
+    {
+        Debug.Log("TouchDown");
+        startTime = clock.getFrameNumber();
+        startPos = Input.mousePosition;
+    }
+
+    /*
+    This method is called when the user lifts their finger from the screen. This method
+    will make note of position of the user's finger when they lifted it up from the screen and the time
+    when they did so. The throwBall method is then called to handle the arc of the throw.
+    */
+    public void OnMouseUp()
+    {
+        Debug.Log("TouchUp");
+        endTime = clock.getFrameNumber();
+        endPos = Input.mousePosition;
+        throwBall();
+    }
+
+    /*
+    This method is called every frame after OnMouseUp is called and calculates the arc of the thrown trash object.
+    */
+    void throwBall()
+    {
+        //Calculating the force along each axis by comparing starting and ending values of time and finger position
+        XaxisForce = endPos.x - startPos.x;
+        YaxisForce = endPos.y - startPos.y;
+        ZaxisForce = endTime - startTime;
+
+        Debug.Log("Force: " + ZaxisForce);
+
+        //The final arc calculation that governs the throw of the trash object.
+        calculatedForce = new Vector3(XaxisForce/10, YaxisForce/15, (ZaxisForce/20) * 50f) * Time.DeltaTime;
+        
+        //Applies gravity and the calculated arc to the trash object
+        trash.useGravity = true;
+        trash.velocity = calculatedForce;
+
+        XaxisForce = 0;
+        YaxisForce = 0;
+
+        //Calls the wait a second funciton
+        StartCoroutine(waitASecond());
+        
+    }
+
+    //Function that pauses for a second before spawning a new ball
+    IEnumerator waitASecond()
+    {
+        yield return new WaitForSeconds(1);
+        spawn.Start();
+    }
+
+}
+

@@ -45,6 +45,12 @@ can play the game
 		Application.LoadLevel("Main");
 	}
 
+    //For entering the name on the leaderboard
+    public void OnTextBoxEntry()
+    {
+
+    }
+
 /*
 This Method is used to take the user to the scene that allows them
 to select if they would like to play the AR version or the non AR

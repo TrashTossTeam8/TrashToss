@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 /*
@@ -31,4 +32,10 @@ variable type can display the value with out error of type mismatch.
 	{
 		score.text = playerScore.ToString ();
 	}
+
+    //Accessor method for the user's score
+    public int getScore()
+    {
+        return Int32.Parse(score.text);
+    }
 }

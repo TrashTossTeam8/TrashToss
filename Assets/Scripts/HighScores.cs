@@ -8,9 +8,10 @@ public class HighScores : MonoBehaviour {
     const string publicCode = "5adeae71d6024519e0f1b351";
     const string webURL = "http://dreamlo.com/lb/";
 
+    static HighScores hs;
+
     public void AddNewHighscore(string name, int score)
     {
-        Debug.Log("HERE");
         StartCoroutine(UploadScore(name, score));
     }
 

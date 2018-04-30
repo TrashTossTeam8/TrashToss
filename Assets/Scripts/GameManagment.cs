@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /*
 This class is used to keep track of loading different scenes with in the game
 and overall managing all game functions. This will be used to transition
 between levels and keep the game flowing. ALso this is where all buttons in the
 game will find their functionality.
-*/ 
+*/
 
 public class GameManagment : MonoBehaviour {
 
+    public static GameManagment instance;
+    TextManager tm = new TextManager();
 /*
 This Method is used to return the user to the MainMenu
 */ 
 	public void OnMenuButtonPress()
 	{
+        GameScore.playerScore = 0;
 		Application.LoadLevel("MainMenu");
 	}
 
@@ -45,11 +49,6 @@ can play the game
 		Application.LoadLevel("Main");
 	}
 
-    //For entering the name on the leaderboard
-    public void OnTextBoxEntry()
-    {
-
-    }
 
 /*
 This Method is used to take the user to the scene that allows them
@@ -61,4 +60,10 @@ all waste stations on campus for the users convienience
 	{
 		Application.LoadLevel("map");
 	}
+
+    //Button functionality for the leaderboard submit button. When user hits the button, the score is sent to the leaderboard.
+    //public void OnSubmitScore()
+    //{
+    //    tm.Submit();
+    //}
 }

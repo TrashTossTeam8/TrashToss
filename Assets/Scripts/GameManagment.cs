@@ -41,6 +41,14 @@ This Method is used to take the user to the LeaderBoard
 	}
 
 /*
+This Method is used to take the user to the LeaderBoard
+*/ 
+	public void ARButtonPress()
+	{
+		Application.LoadLevel("AR_GameMain");
+	}
+
+/*
 This Method is used to take the user to the Main level where the user
 can play the game
 */ 
@@ -60,6 +68,7 @@ all waste stations on campus for the users convienience
 	{
 		Application.LoadLevel("map");
 	}
+
 
     //Button functionality for the leaderboard submit button. When user hits the button, the score is sent to the leaderboard.
     //public void OnSubmitScore()

@@ -37,6 +37,14 @@ This Method is used to take the user to the LeaderBoard
 	}
 
 /*
+This Method is used to take the user to the LeaderBoard
+*/ 
+	public void ARButtonPress()
+	{
+		Application.LoadLevel("AR_GameMain");
+	}
+
+/*
 This Method is used to take the user to the Main level where the user
 can play the game
 */ 
@@ -61,4 +69,5 @@ all waste stations on campus for the users convienience
 	{
 		Application.LoadLevel("map");
 	}
+
 }

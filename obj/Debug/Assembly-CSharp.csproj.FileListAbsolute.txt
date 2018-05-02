@@ -72,3 +72,5 @@ C:\Users\Lawrence\Documents\Unity Projects\Trash Toss Prototype\Temp\bin\Debug\U
 C:\Users\Lawrence\Documents\Unity Projects\Trash Toss Prototype\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
 C:\Users\Lawrence\Documents\Unity Projects\Trash Toss Prototype\obj\Debug\Assembly-CSharp.dll
 C:\Users\Lawrence\Documents\Unity Projects\Trash Toss Prototype\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Lawrence\Documents\Unity Projects\Trash Toss Prototype Team\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Lawrence\Documents\Unity Projects\Trash Toss Prototype Team\obj\Debug\Assembly-CSharp.dll

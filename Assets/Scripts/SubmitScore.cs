@@ -22,7 +22,6 @@ public class SubmitScore : MonoBehaviour {
 
     public void submit()
     {
-        Debug.Log("DING");
         highScores.AddNewHighscore(name, score);
     }
 	

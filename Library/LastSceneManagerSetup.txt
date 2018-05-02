@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AR_GameMain.unity
+- path: Assets/Leaderboard.unity
   isLoaded: 1
   isActive: 1

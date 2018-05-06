@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,13 +49,22 @@ public class TextManager : MonoBehaviour
     public void AddNewHighscore(string name, int score)
     {
         StartCoroutine(UploadScore(name, score));
+        Score[] blankList = new Score[0];
+        highscoresDisplay.OnHighScoresDownloaded(blankList);
+
+        //Slight pause to give the database server time to submit the score before updating the leaderboard
+        Thread.Sleep(100);
+
+        DownloadHighScores();
     }
+
 
     IEnumerator UploadScore(string name, int score)
     {
         WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(name) + "/" + score);
         yield return www;
     }
+    
 
     public void DownloadHighScores()
     {
@@ -89,7 +99,6 @@ public class TextManager : MonoBehaviour
             string name = info[0];
             int score = int.Parse(info[1]);
             scoreList[x] = new Score(name, score);
-            //Debug.Log(scoreList[x].username + ": " + scoreList[x].score);
         }
 
     }

@@ -19,6 +19,7 @@ that this scirpt is attatched too (usually trash objects)
 is destroyed.
 */
 
+
         //Shut up Lawrence
 
 	void OnCollisionEnter(Collision floor)

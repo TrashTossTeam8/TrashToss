@@ -4,7 +4,7 @@ using System.Collections;
 /*
 This class is used to trigger the correct sorting of a piece of trash.
 When the user correctly sorts trash this class will update the player score
-after verifying the user did infact sort trash correctly.
+after verifying the user did infact sort trash correctly
 */
 
 public class CompostScore : MonoBehaviour {

@@ -5,7 +5,10 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rTrash: {fileID: 100004, guid: a61fb393315e5734c8aaa16774c4e74e, type: 3}
+  - cTrash: {fileID: 100026, guid: 1ef7c2fe7a8affb4db61940795e9e9b8, type: 3}
+  - lTrash: {fileID: 100004, guid: cc7132b083fa8af4fa465135f3d513fa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

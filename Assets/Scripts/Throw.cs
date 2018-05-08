@@ -31,6 +31,8 @@ public class Throw : MonoBehaviour
 
     public SpawnScript spawn;
 
+    public ARSpawnScript otherSpawn;
+
     public Timer clock;
 
 
@@ -115,7 +117,14 @@ public class Throw : MonoBehaviour
     IEnumerator waitASecond()
     {
         yield return new WaitForSeconds(1);
-        spawn.Start();
+        if (spawn != null)
+        {
+            spawn.Start();
+        }
+        else
+        {
+            otherSpawn.Start();
+        }
     }
 
 }

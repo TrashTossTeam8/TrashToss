@@ -47,6 +47,7 @@ which type of trash will spawn.
 */ 
 	void Spawner()
 	{
+        
 		// Randomizing the int variable to a whole integer
 		// between the values of 1 and 3 thus determining trash
 		// type
@@ -61,15 +62,15 @@ which type of trash will spawn.
 		// to determine which type of trash to spawn (1 is recycle, 2 is compost,
 		// and 3 is land fill). The Instantiate function is called to spawn the trash
 		// and is able to take in a vector which acts as coordinates and spawns the 
-		// object at that location. A totation type is also passed in due to neccesity,
+		// object at that location. A rotation type is also passed in due to neccesity,
 		// Unity needs that information to call instantiate at a specific location.
 		switch (randomizer)
 		{
 		case 1:
-			Instantiate (rTrash,new Vector3(-.08f,12.52f,-11.19f), transform.rotation);
+			Instantiate (rTrash,new Vector3(-.08f, 12.52f,-11.19f), transform.rotation);
 			break;
 		case 2:
-			Instantiate (cTrash,new Vector3(-.08f,12.52f,-11.19f), transform.rotation);
+			Instantiate (cTrash,new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
 			break;
 		case 3:
 			Instantiate (lTrash, new Vector3 (-.08f, 12.52f, -11.19f), transform.rotation);
@@ -77,7 +78,7 @@ which type of trash will spawn.
 		// Default is used incase thier is an unforseen error computing the random
 		// variable.
 		default:
-			Instantiate (rTrash,new Vector3(-.08f,12.52f,-11.19f), transform.rotation);
+			Instantiate (rTrash,new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
 			break;
 
 		}

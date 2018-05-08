@@ -49,6 +49,14 @@ can play the game
 		Application.LoadLevel("Main");
 	}
 
+/*
+This Method is used to take the user to the Augmented Reality level where the user
+can play the game
+*/ 
+	public void OnButtonAR()
+	{
+		Application.LoadLevel("ARgame");
+	}
 
 /*
 This Method is used to take the user to the scene that allows them

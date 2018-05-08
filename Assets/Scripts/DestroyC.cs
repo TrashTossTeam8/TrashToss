@@ -19,8 +19,9 @@ that this scirpt is attatched too (usually trash objects)
 is destroyed.
 */
 
-	void OnTriggerEnter(Collider SensorObject)
+
+	void OnCollisionEnter(Collision floor)
 	{
-		Destroy (gameObject, 5f);
+		Destroy (gameObject, 2f);
 	}
 }

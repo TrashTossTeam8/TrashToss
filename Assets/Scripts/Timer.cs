@@ -52,7 +52,7 @@ public class Timer : MonoBehaviour
             //Tell the TipScript to display a new tip every ten seconds
             if(timeLeft % 10 == 0)
             {
-                tScript.GetTip();
+                //tScript.GetTip();
             }
         }
     }

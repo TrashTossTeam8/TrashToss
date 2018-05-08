@@ -8,6 +8,9 @@ public class Timer : MonoBehaviour
     public int frameCount = 0;
     public Text countdownText;
 
+    //References the TipScript
+    public TipScript tScript;
+
     // Use this for initialization
     void Start()
     {
@@ -37,6 +40,7 @@ public class Timer : MonoBehaviour
         return frameCount;
     }
 
+
     //Decrements time every second
     IEnumerator LoseTime()
     {
@@ -44,6 +48,12 @@ public class Timer : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             timeLeft--;
+
+            //Tell the TipScript to display a new tip every ten seconds
+            if(timeLeft % 10 == 0)
+            {
+                tScript.GetTip();
+            }
         }
     }
 }

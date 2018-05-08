@@ -112,9 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e896c4c80fe83459bcfebb44807e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 8
-  arc: 8
-  speed: 8
+  startPos: {x: 0, y: 0}
+  endPos: {x: 0, y: 0}
+  spawn: {fileID: 0}
+  clock: {fileID: 0}
+  trash: {fileID: 0}
 --- !u!114 &114189673874609872
 MonoBehaviour:
   m_ObjectHideFlags: 1

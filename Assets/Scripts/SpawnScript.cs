@@ -72,7 +72,7 @@ which type of trash will spawn.
 			Instantiate (cTrash,new Vector3(-.08f,12.52f,-11.19f), transform.rotation);
 			break;
 		case 3:
-			Instantiate (lTrash,new Vector3(-.08f,12.52f,-11.19f), transform.rotation);
+			Instantiate (lTrash, new Vector3 (-.08f, 12.52f, -11.19f), transform.rotation);
 			break;
 		// Default is used incase thier is an unforseen error computing the random
 		// variable.

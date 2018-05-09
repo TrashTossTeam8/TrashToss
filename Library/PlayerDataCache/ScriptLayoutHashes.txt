@@ -22,6 +22,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+e27ad4ac0da1a8e98cf73bb4a270c259 Assembly-CSharp.dll:.ARSpawnScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.KeepTheMusicGoing
 47664082d4a3974ef818d1721add736b Assembly-CSharp.dll:.TextManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CompostScore
@@ -122,7 +123,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 4c4d2117bd2fbec66edb9a6291eb558d Assembly-CSharp.dll:.GameScore
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
-bd8ed42bc8f58ca37aac546ea2849abd Assembly-CSharp.dll:.Throw
+65779d3edbf0d06c85262960afdb1641 Assembly-CSharp.dll:.Throw
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -266,6 +267,7 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+65779d3edbf0d06c85262960afdb1641 Assembly-CSharp.dll:.ThrowAR
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LandFillScore
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameManagment
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HighScores

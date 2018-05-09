@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ARSpawnScript.cs" />
      <Compile Include="Assets\Scripts\CompostScore.cs" />
      <Compile Include="Assets\Scripts\DestroyC.cs" />
      <Compile Include="Assets\Scripts\DestroyL.cs" />
@@ -66,6 +67,7 @@
      <Compile Include="Assets\Scripts\SubmitScore.cs" />
      <Compile Include="Assets\Scripts\TextManager.cs" />
      <Compile Include="Assets\Scripts\Throw.cs" />
+     <Compile Include="Assets\Scripts\ThrowAR.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\TipScript.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />

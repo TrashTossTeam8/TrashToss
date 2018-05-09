@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuforia;
 
 /*
 This class is used to spawn a random trash object in the game so
@@ -11,7 +12,6 @@ the game sorting trash that is recyclable.
 
 public class ARSpawnScript : MonoBehaviour
 {
-
     public GameObject logo;
 
     // This is a gameObject place holder for the recycable trash type.
@@ -50,7 +50,6 @@ public class ARSpawnScript : MonoBehaviour
     */
     void Spawner()
     {
-
         
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
@@ -72,26 +71,26 @@ public class ARSpawnScript : MonoBehaviour
         {
             case 1:
                 
-                Instantiate(rTrash, new Vector3(2.70f, -19.60f, -2.30f), transform.rotation);
+			Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 rTrash.transform.parent = logo.transform;
                 Debug.Log("IT SURE DOES GO HERE1");
                 break;
             case 2:
                 
-                Instantiate(cTrash, new Vector3(2.70f, -19.60f, -2.30f), transform.rotation);
+			Instantiate(cTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 Debug.Log("IT SURE DOES GO HERE2");
                 cTrash.transform.parent = logo.transform;
                 break;
             case 3:
                 
-                Instantiate(lTrash, new Vector3(2.70f, -19.60f, -2.30f), transform.rotation);
+			Instantiate(lTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 Debug.Log("IT SURE DOES GO HERE3");
                 lTrash.transform.parent = logo.transform;
                 break;
             // Default is used incase thier is an unforseen error computing the random
             // variable.
             default:
-                Instantiate(rTrash, new Vector3(2.70f, -19.60f, -2.30f), transform.rotation);
+			Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 break;
 
         }

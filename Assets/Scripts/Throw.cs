@@ -99,7 +99,7 @@ public class Throw : MonoBehaviour
 
 
         //The final arc calculation that governs the throw of the trash object.
-        calculatedForce = new Vector3(XaxisForce / 10, YaxisForce / 15, (ZaxisForce / 300) * 50f);
+        calculatedForce = new Vector3(XaxisForce / 10, YaxisForce / 15, (ZaxisForce / 300) * 50f)/7;
 
         //Applies gravity and the calculated arc to the trash object
         trash.useGravity = true;
@@ -116,7 +116,7 @@ public class Throw : MonoBehaviour
     //Function that pauses for a second before spawning a new ball
     IEnumerator waitASecond()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         if (spawn != null)
         {
             spawn.Start();

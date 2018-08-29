@@ -60,7 +60,7 @@ which type of trash will spawn.
 		// Randomizing the int variable to a whole integer
 		// between the values of 1 and 3 thus determining trash
 		// type
-		randomizer = (int)Random.Range (11f, 12f);
+		randomizer = (int)Random.Range (1f, 12f);
 
 		// Write to concel the random variable value in order
 		// to tell if our code is working correclty and spawning

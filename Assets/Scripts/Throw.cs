@@ -99,7 +99,7 @@ public class Throw : MonoBehaviour
 
 
         //The final arc calculation that governs the throw of the trash object.
-        calculatedForce = new Vector3(XaxisForce / 10, YaxisForce / 15, (ZaxisForce / 300) * 50f)/7;
+        calculatedForce = new Vector3(XaxisForce/2, YaxisForce / 5, (ZaxisForce / 75) * 50f)/7;
 
         //Applies gravity and the calculated arc to the trash object
         trash.useGravity = true;

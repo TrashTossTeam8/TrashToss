@@ -300,6 +300,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\f.cs" />
+    <Compile Include="Assets\ri.cs" />
     <Compile Include="Assets\Scripts\ARSpawnScript.cs" />
     <Compile Include="Assets\Scripts\CompostScore.cs" />
     <Compile Include="Assets\Scripts\DestroyC.cs" />
@@ -316,8 +318,10 @@
     <Compile Include="Assets\Scripts\SubmitScore.cs" />
     <Compile Include="Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Scripts\Throw.cs" />
+    <Compile Include="Assets\Scripts\ThrowAR.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TipScript.cs" />
+    <Compile Include="Assets\sphe.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
   </ItemGroup>
@@ -328,6 +332,9 @@
     <None Include="Assets\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
     <None Include="Assets\Editor\Vuforia\VuforiaMars_ModelTarget\authoringinfo.xml" />
     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
+    <None Include="Assets\FREE Food Pack\Shaders\Food.shader" />
+    <None Include="Assets\Hand painted bottle\readme.txt" />
+    <None Include="Assets\Laptop\StandardColorMask.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\TrashToss.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />

@@ -14,17 +14,18 @@ public class SpawnScript : MonoBehaviour {
 	// This is a gameObject place holder for the recycable trash type.
 	// the trash object is directly referenced in the Unity engine 
 	// through drag and drop
-	public GameObject rTrash;
-
-	// This is a gameObject place holder for the Compost trash type.
-	// the trash object is directly referenced in the Unity engine 
-	// through drag and drop
-	public GameObject cTrash;
-
-	// This is a gameObject place holder for the Land Fill trash type.
-	// the trash object is directly referenced in the Unity engine 
-	// through drag and drop
-	public GameObject lTrash;
+	public GameObject waterBottle;
+    public GameObject cheeseBurger;
+    public GameObject pizzaBox;
+    public GameObject chipBag;
+    public GameObject book;
+    public GameObject toiletPaper;
+    public GameObject eraser;
+    public GameObject hat;
+    public GameObject pencil;
+    public GameObject paper;
+    public GameObject glassBottle;
+    public GameObject sodaCan;
 
 	// This int variable is used to insure that the type of trash 
 	// spawned is random.
@@ -47,11 +48,19 @@ which type of trash will spawn.
 */ 
 	void Spawner()
 	{
+
+        //List<GameObject> gameObjects = new List<GameObject>();
+
+        //gameObjects.Add(waterBottle);
+        //gameObjects.Add(pizzaBox);
+        //gameObjects.Add(chipBag);
+        //gameObjects.Add(cheeseBurger);
+        
         
 		// Randomizing the int variable to a whole integer
 		// between the values of 1 and 3 thus determining trash
 		// type
-		randomizer = (int)Random.Range (1f, 4f);
+		randomizer = (int)Random.Range (11f, 12f);
 
 		// Write to concel the random variable value in order
 		// to tell if our code is working correclty and spawning
@@ -67,19 +76,43 @@ which type of trash will spawn.
 		switch (randomizer)
 		{
 		case 1:
-			Instantiate (rTrash,new Vector3(-.08f, 12.52f,-11.19f), transform.rotation);
+			Instantiate (waterBottle,new Vector3(-.08f, 12.52f,-11.19f), transform.rotation);
 			break;
 		case 2:
-			Instantiate (cTrash,new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+			Instantiate (pizzaBox,new Vector3(0.75f, 12.52f, -11.19f), transform.rotation);
 			break;
 		case 3:
-			Instantiate (lTrash, new Vector3 (-.08f, 12.52f, -11.19f), transform.rotation);
+			Instantiate (chipBag, new Vector3 (-.08f, 12.52f, -11.19f), transform.rotation);
 			break;
-		// Default is used incase thier is an unforseen error computing the random
-		// variable.
-		default:
-			Instantiate (rTrash,new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
-			break;
+        case 4:
+            Instantiate(cheeseBurger, new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+            break;
+        case 5:
+            Instantiate(book, new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+            break;
+        case 6:
+            Instantiate(toiletPaper, new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+            break;
+        case 7:
+            Instantiate(eraser, new Vector3(-2.5f, 7.52f, -11.19f), transform.rotation);
+            break;
+        case 8:
+            Instantiate(hat, new Vector3(-7f, 11.52f, -17.19f), transform.rotation);
+            break;
+        case 9:
+            Instantiate(paper, new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+            break;
+        case 10:
+            Instantiate(glassBottle, new Vector3(-.08f, 13.52f, -11.19f), transform.rotation);
+            break;
+        case 11:
+            Instantiate(sodaCan, new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+            break;
+            // Default is used incase there is an unforseen error computing the random
+            // variable.
+            default:
+		    Instantiate (waterBottle,new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+		    break;
 
 		}
 	}

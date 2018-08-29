@@ -316,6 +316,7 @@
     <Compile Include="Assets\Scripts\RecycleScore.cs" />
     <Compile Include="Assets\Scripts\SpawnScript.cs" />
     <Compile Include="Assets\Scripts\SubmitScore.cs" />
+    <Compile Include="Assets\Scripts\TestScriptDOS.cs" />
     <Compile Include="Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Scripts\Throw.cs" />
     <Compile Include="Assets\Scripts\ThrowAR.cs" />

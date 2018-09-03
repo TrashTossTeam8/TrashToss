@@ -26,6 +26,12 @@ public class SpawnScript : MonoBehaviour {
     public GameObject paper;
     public GameObject glassBottle;
     public GameObject sodaCan;
+    public GameObject waterMelon;
+    public GameObject tree;
+    public GameObject pineApple;
+    public GameObject tomato;
+    public GameObject rubberDuck;
+    public GameObject pen;
 
 	// This int variable is used to insure that the type of trash 
 	// spawned is random.
@@ -60,7 +66,7 @@ which type of trash will spawn.
 		// Randomizing the int variable to a whole integer
 		// between the values of 1 and 3 thus determining trash
 		// type
-		randomizer = (int)Random.Range (1f, 12f);
+		randomizer = (int)Random.Range (17f, 18f);
 
 		// Write to concel the random variable value in order
 		// to tell if our code is working correclty and spawning
@@ -108,10 +114,30 @@ which type of trash will spawn.
         case 11:
             Instantiate(sodaCan, new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
             break;
+        case 12:
+            Instantiate(waterMelon, new Vector3(6f, 12.52f, -11.19f), transform.rotation);
+            break;
+        case 13:
+            Instantiate(tree, new Vector3(-0.25f, 12.52f, -11.19f), transform.rotation);
+            break;
+        case 14:
+            Instantiate(pineApple, new Vector3(-7.5f, 16f, -11.19f), transform.rotation);
+            break;
+        case 15:
+            Instantiate(tomato, new Vector3(-.08f, 20f, 1f), transform.rotation);
+            break;
+        case 16:
+            Instantiate(rubberDuck, new Vector3(-.08f, 10f, 1f), transform.rotation);
+            break;
+        case 17:
+            Instantiate(pen, new Vector3(-.08f, 10f, 1f), transform.rotation);
+            break;
+
+
             // Default is used incase there is an unforseen error computing the random
             // variable.
             default:
-		    Instantiate (waterBottle,new Vector3(-.08f, 12.52f, -11.19f), transform.rotation);
+		    Instantiate (waterBottle,new Vector3(-.08f, 18.52f, -11.19f), transform.rotation);
 		    break;
 
 		}

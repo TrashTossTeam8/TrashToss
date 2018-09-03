@@ -339,6 +339,7 @@
     <None Include="Assets\FREE Food Pack\Shaders\Food.shader" />
     <None Include="Assets\Hand painted bottle\readme.txt" />
     <None Include="Assets\Laptop\StandardColorMask.shader" />
+    <None Include="Assets\Snowconesolid Assets\Super Rubber Duck Pack\Snowconesolid Assets ReadMe.txt" />
     <None Include="Assets\StreamingAssets\Vuforia\TrashToss.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />

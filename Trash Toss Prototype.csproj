@@ -229,6 +229,12 @@
     <Reference Include="UnityEditor.TreeEditor">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.GoogleAudioSpatializer">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
@@ -309,7 +315,6 @@
     <Compile Include="Assets\Scripts\HighScores.cs" />
     <Compile Include="Assets\Scripts\KeepTheMusicGoing.cs" />
     <Compile Include="Assets\Scripts\LandFillScore.cs" />
-    <Compile Include="Assets\Scripts\Mamadou.cs" />
     <Compile Include="Assets\Scripts\Pleasework.cs" />
     <Compile Include="Assets\Scripts\RecycleScore.cs" />
     <Compile Include="Assets\Scripts\SpawnScript.cs" />

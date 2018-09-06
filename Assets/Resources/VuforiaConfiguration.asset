@@ -8,12 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: -2067402452, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: VuforiaConfiguration
-  m_EditorClassIdentifier: Vuforia.UnityExtensions:Vuforia:VuforiaConfiguration
+  m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
-    ufoLicenseKey: QVhaZ242Yi8vLy8vQUFBQUtMSjB2YmhKK2tqWHVjRWlJUGNqRW1pWFRPRy9WYkFMdnRGWmQwY3BEVE03R2x1Vmx1M25pejNERVlCMjBpakJHdjhEWFlRMXJZZ0k3RGY2NzJLTzEyUytWaC9MVitXS0l3R0JIOG54ODI1dXVLWnNzTG8vZnNSNndaMUxQNittb2lDUUNERmI3aHh5Z1FGQ2dEWEF4Rm9RWnJSK3EwQmF2ME5sbzJSTXZ3TnZnLzFqUXh3bC9KMk9HUVg4eWVHeXdyendCemROTHNjRHg5eXY5MUNzVmViMmhTdTBZM01hRzJCczhQbXdsVTE1Ry82Njg2N1BTMTllamRCWXluaU15T1ZXbXBCN29sVWYvQjNmOU1jb1RVQmRuajJLTWdSMmxLcnNLS1ZJMGVab1RkR0V4L21xQzNQRGlsekM0UjY5b3Ird0dPNUdmYS9Lc0NhdVBZVkxlcjh6ZjZaNGJ5a3NuQWtVSmxhZG0wNDE=
+    vuforiaLicenseKey: AbrIwhz/////AAAAmWPaOeiVh07Flz43rKIjaVBOcbEfHIiMFcrRIa7wwKQXWbmRmEoHlBIGqM3+Gx2OJ7bAL3TYAcrcyjpjfzr1A0+Msv02tKXvi9hhxqtryvggtC/ow+NCdiuilpbmm0/qY+TcvvjTfZcrd1Wz3Vg+FlIbMg0CHYgMD547Ubuo3Sctb0wLqJfR6OzCJqjTc7A/hClN6Smubpv0aYCtKJUdoakoXIXtrfP6Z1ufCpQtXVg90vbfK8aDDS57nU9lqDZA7NVG3FqmjgQa2MrqankHyHziO+E2cUw+pp9eKgrxugvwdJ4yfPtCYCW8UO9DvMGaHWQZJyZ6Txc/6DK1D0aCfCEB0BrEzOdk0fRG0h2uyb5L
+    ufoLicenseKey: QVQyb2FORC8vLy8vQUFBQUtCUEx4dko1bWtIc3UzS2lOUEtCV2VkaWdNL1MyT2pOWTJNYWJEaGcwMmc4dHpjSDE2bnpZWXhsM1RLN3Z4OUFrWmR1QWJvU2lpY3dTb1F3NTVJeEEwSVB4ZHl3RWlkSTZGcWRibVJSeVBJNEdKNFZaVHIxYnV2S1BIMU93WVZ6TTNrVCtreUk5UkdpSWRpa3NFUXR5WTc1ZXFMY01ySWR2SjFlbnU2UDhYRDFtOGQ4ak9qSEdKZXpiQTUwNWRtTlB3eEZjcUFrTzNXRTNhc0RmbGd6anRyaHNpQU5GbmFwalZaS0NQZ2FjZ1EzSVpsS24zTFp4REdzYzAwUVhiY3E0NGVCN3Q4eWxLVXU3MVZ6R2lJZU1PcCt3UkRXTit3d0c4V0QxNjN6OWZHUnNxWmVBbUt0Zzc5ZlBQMTFBbG5mZmgwMWtMdTl6NVdmVlNuZjlkWHY5b0dyekNETS9JQlZEZmZsWWV1ZDZGQTU=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
@@ -44,11 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - VuforiaMars_Images
-    - VuforiaMars_VuMark
+    - TrashToss
     dataSetsToActivate:
-    - VuforiaMars_Images
-    - VuforiaMars_VuMark
+    - TrashToss
   videoBackground:
     clippingMode: 0
     numDivisions: 2

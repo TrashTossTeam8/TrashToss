@@ -1,7 +1,9 @@
 fileFormatVersion: 2
 guid: e35715015772c7444ba5e18c4889b897
+timeCreated: 1472438384
+licenseType: Store
 ModelImporter:
-  serializedVersion: 23
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: Global
     100002: Head
@@ -495,35 +497,26 @@ ModelImporter:
     13700014: Mill_hat_pants_remap
     13700016: Mill_t_shirt
     13700018: Mill_t_shirt_remap
-    2186277476908879412: ImportLogs
-  externalObjects: {}
   materials:
     importMaterials: 0
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'Hips' not found\n"
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -531,73 +524,64 @@ ModelImporter:
     globalScale: 100
     meshCompression: 0
     addColliders: 0
-    importVisibility: 0
     importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
-    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 109
     normalImportMode: 1
     tangentImportMode: 3
-    normalCalculationMode: 0
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
     human: []
     skeleton:
     - name: Mill_hat_fix_01(Clone)
-      parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     - name: HeadAdjust
-      parentName: 
       position: {x: -0.051950023, y: 0.000000003922132, z: 0.000000027939677}
       rotation: {x: -0.000000049617423, y: 0.0000000032596317, z: -1.40976056e-14,
         w: 1}
       scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     - name: Mill_hat_remap
-      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0.000000030907028, y: 0.7071068, z: 0.7071067, w: 0.00000003090702}
       scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     - name: UMA_Male_Rig
-      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0.000000053385083, z: 0.000000053385094, w: 0.7071067}
       scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     - name: HeadAdjust (2)
-      parentName: 
       position: {x: -0.051950023, y: 0.000000003922132, z: 0.000000027939677}
       rotation: {x: -0.000000049617423, y: 0.0000000032596317, z: -1.40976056e-14,
         w: 1}
       scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     - name: LeftEarAdjust
-      parentName: 
       position: {x: -0.00000009778887, y: -9.31323e-10, z: -0.000000048428774}
       rotation: {x: -0.0000001641456, y: 0.00000016856939, z: 0.000000005180482, w: 1}
       scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
     - name: RightEarAdjust
-      parentName: 
       position: {x: -0.000000028871, y: -0.00000000349246, z: -0.00000006449409}
       rotation: {x: 0.0000002530869, y: 0.00000015599653, z: -0.000000033178367, w: 1}
       scale: {x: 0.9999999, y: 1, z: 1}
+      transformModified: 1
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -606,10 +590,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
-    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
   humanoidOversampling: 1

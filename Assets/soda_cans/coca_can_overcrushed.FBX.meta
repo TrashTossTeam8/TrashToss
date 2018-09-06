@@ -1,37 +1,23 @@
 fileFormatVersion: 2
 guid: b420b18a32798f64aad678a924fad6b0
+timeCreated: 18446744011573954816
 ModelImporter:
-  serializedVersion: 23
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: Bo__te001
     100002: //RootNode
     100004: Cylindre001
-    100006: "Bo\xEEte001"
     400000: Bo__te001
     400002: //RootNode
     400004: Cylindre001
-    400006: "Bo\xEEte001"
     2300000: Bo__te001
     2300002: Cylindre001
-    2300004: "Bo\xEEte001"
     3300000: Bo__te001
     3300002: Cylindre001
-    3300004: "Bo\xEEte001"
     4300000: Cylindre001
     4300002: Bo__te001
-    4300004: "Bo\xEEte001"
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 08 - Default
-    second: {fileID: 2100000, guid: df46a6dbd7b02d44c96c0966e408ae57, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #25'
-    second: {fileID: 2100000, guid: 30c22a928d1d3fd48ad861c739ae1d57, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,7 +36,6 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -82,8 +67,6 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

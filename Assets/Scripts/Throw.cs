@@ -105,6 +105,7 @@ public class Throw : MonoBehaviour
 
         //Applies gravity and the calculated arc to the trash object
         trash.useGravity = true;
+        //trash.rotation()
         trash.velocity = calculatedForce;
 
         XaxisForce = 0;

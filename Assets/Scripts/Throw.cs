@@ -65,6 +65,7 @@ public class Throw : MonoBehaviour
         startTime = clock.getFrameNumber();
         startPos = Input.mousePosition;
     }
+    
 
     /*
     This method is called when the user lifts their finger from the screen. This method

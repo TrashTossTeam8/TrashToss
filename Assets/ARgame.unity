@@ -142,7 +142,7 @@ RectTransform:
   m_LocalScale: {x: 0.044999998, y: 0.045000028, z: 0.045000028}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -223,12 +223,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 480895879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &480895881
 AudioSource:
@@ -606,7 +606,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1452835902}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -724,7 +725,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1944271389}
-  - {fileID: 1452835902}
   - {fileID: 1649275959}
   - {fileID: 1749355989}
   - {fileID: 408979965}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 1452835902}
   - component: {fileID: 1452835901}
   m_Layer: 0
-  m_Name: SpawnLocation
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -826,22 +826,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d250a022358b141bd84eafa197a886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logo: {fileID: 1028734258}
+  vuforiaTargetObject: {fileID: 1028734258}
+  spawnWaitTime: 2
   rTrash: {fileID: 1362920466948792, guid: 07f6068064ebf75408ed7215380432b1, type: 2}
-  cTrash: {fileID: 1592661000227598, guid: 2cadb3ad3af99ee4bb059ab65e0f6f4e, type: 2}
-  lTrash: {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827, type: 2}
+  cTrash: {fileID: 1362920466948792, guid: 07f6068064ebf75408ed7215380432b1, type: 2}
+  lTrash: {fileID: 1362920466948792, guid: 07f6068064ebf75408ed7215380432b1, type: 2}
+  xMult: 10
+  yMult: 6.75
+  zMult: 8.3
+  startPos: {x: 0, y: 0}
+  endPos: {x: 0, y: 0}
+  clock: {fileID: 0}
 --- !u!4 &1452835902
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1452835900}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0, z: 1}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1028734264}
-  m_RootOrder: 1
+  m_Father: {fileID: 1020861078}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1465428621
 GameObject:
@@ -871,7 +878,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1465428623
 MeshFilter:
@@ -944,7 +951,7 @@ RectTransform:
   m_LocalScale: {x: 0.044999998, y: 0.045000028, z: 0.045000028}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -957,7 +964,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649275958}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09364cf9adddc7d4eb723c2728999e13, type: 3}
   m_Name: 
@@ -1206,7 +1213,7 @@ RectTransform:
   m_LocalScale: {x: 0.044999998, y: 0.045000028, z: 0.045000028}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

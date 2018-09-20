@@ -119,14 +119,19 @@ public class ThrowAR : MonoBehaviour
 	IEnumerator waitASecond()
 	{
 		yield return new WaitForSeconds(2);
-		if (spawn != null)
-		{
-			spawn.Start();
-		}
-		else
-		{
-			otherSpawn.Start();
-		}
+        //if (spawn != null)
+        //{
+        //	spawn.Start();
+        //}
+        //else
+        //{
+        //	otherSpawn.Start();
+        //}
+        GameObject heldTrash;
+        if(otherSpawn)
+        {
+            heldTrash = otherSpawn.SpawnTrash();
+        }
 	}
 
 }

@@ -29,9 +29,13 @@ public class ARSpawnScript : MonoBehaviour
     // through drag and drop
     public GameObject lTrash;
 
+    public GameObject[] rTrashArray; // array of available recyclables
+
     // This int variable is used to insure that the type of trash 
     // spawned is random.
     private int randomizer;
+
+    public Vector3 spawnPosition = new Vector3(0f, -0.45f, 0.75f);
 
     /*
     This method is called when the game starts and is used to spawn a piece of
@@ -39,7 +43,7 @@ public class ARSpawnScript : MonoBehaviour
     */
     public void Start()
     {
-        Spawner();
+        SpawnTrash();
     }
 
     /*
@@ -48,7 +52,7 @@ public class ARSpawnScript : MonoBehaviour
     randomize to a value between 1 and 3 which then determines through a switch case
     which type of trash will spawn.
     */
-    void Spawner()
+    public GameObject SpawnTrash()
     {
         
         // Randomizing the int variable to a whole integer
@@ -61,6 +65,8 @@ public class ARSpawnScript : MonoBehaviour
         // the right type of trash
         Debug.Log(randomizer);
 
+        GameObject spawnedObject;
+
         // A switch statement that takes in our ramdom variable and uses that
         // to determine which type of trash to spawn (1 is recycle, 2 is compost,
         // and 3 is land fill). The Instantiate function is called to spawn the trash
@@ -71,28 +77,40 @@ public class ARSpawnScript : MonoBehaviour
         {
             case 1:
                 
-			Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
+			    spawnedObject = Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 rTrash.transform.parent = logo.transform;
                 Debug.Log("IT SURE DOES GO HERE1");
                 break;
             case 2:
-                
-			Instantiate(cTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
+
+                spawnedObject = Instantiate(cTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 Debug.Log("IT SURE DOES GO HERE2");
                 cTrash.transform.parent = logo.transform;
                 break;
             case 3:
-                
-			Instantiate(lTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
+
+                spawnedObject = Instantiate(lTrash, Vector3.zero, transform.rotation); //new Vector3(0f,-35f,200.4f)
                 Debug.Log("IT SURE DOES GO HERE3");
-                lTrash.transform.parent = logo.transform;
+                //lTrash.transform.parent = logo.transform;
+                spawnedObject.transform.SetParent(Camera.main.transform);
+                spawnedObject.transform.localPosition = spawnPosition;
+
                 break;
             // Default is used incase thier is an unforseen error computing the random
             // variable.
             default:
-			Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
+                spawnedObject = Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 break;
 
         }
+
+        // Turn off Physics of the Object.
+        Rigidbody spawnedObjectRigidbody = spawnedObject.GetComponent<Rigidbody>();
+        spawnedObjectRigidbody.isKinematic = true; // Freeze Object Physics
+
+
+        //ToDo: Throw Object after input.
+
+        return spawnedObject;
     }
 }

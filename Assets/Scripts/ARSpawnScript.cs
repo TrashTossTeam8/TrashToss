@@ -227,7 +227,7 @@ public class ARSpawnScript : MonoBehaviour
         spawnObjRB.isKinematic = false;
         spawnObjRB.velocity = calculatedForce;
 
-        //currentObject.transform.SetParent(vuforiaTargetObject.transform);
+        currentObject.transform.SetParent(vuforiaTargetObject.transform);
 
         currentObject = null;
 

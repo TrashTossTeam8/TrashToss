@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
@@ -11,10 +12,12 @@ public class Timer : MonoBehaviour
     //References the TipScript
     public TipScript tScript;
 
+    public UnityEvent OnTimeFinished;
+
     // Use this for initialization
     void Start()
     {
-        StartCoroutine("LoseTime");
+        StartCoroutine(LoseTime());
     }
 
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class Timer : MonoBehaviour
             //Calsl the Lose Time function
             StopCoroutine("LoseTime");
             countdownText.text = "Times Up!";
+
+            OnTimeFinished.Invoke();
 
             //Sends the user to the leaderboard page
             Application.LoadLevel("Leaderboard");

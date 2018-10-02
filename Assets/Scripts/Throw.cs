@@ -94,7 +94,7 @@ public class Throw : MonoBehaviour
         XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))*10;
         YaxisForce = ((endPos.y - startPos.y)/(endTime - startTime))*10;
         //ZaxisForce = (endTime - startTime) * ((float)distance / 15);
-        ZaxisForce = ((((float)distance) / (endTime - startTime))*10)/50;
+        ZaxisForce = ((((float)distance*50) / (endTime - startTime))*10)/50;
 
         Debug.Log("Force: " + ZaxisForce);
 
@@ -114,6 +114,8 @@ public class Throw : MonoBehaviour
 
         //Calls the wait a second funciton
         StartCoroutine(waitASecond());
+
+        Debug.Log("AY CAPTAIN");
 
     }
 

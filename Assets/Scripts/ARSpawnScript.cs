@@ -22,6 +22,25 @@ public class ARSpawnScript : MonoBehaviour
     // through drag and drop
     public GameObject rTrash;
 
+    public GameObject waterBottle;
+    public GameObject cheeseBurger;
+    public GameObject pizzaBox;
+    public GameObject chipBag;
+    public GameObject book;
+    public GameObject toiletPaper;
+    public GameObject eraser;
+    public GameObject hat;
+    public GameObject pencil;
+    public GameObject paper;
+    public GameObject glassBottle;
+    public GameObject sodaCan;
+    public GameObject waterMelon;
+    public GameObject tree;
+    public GameObject pineApple;
+    public GameObject tomato;
+    public GameObject rubberDuck;
+    public GameObject pen;
+
     // This is a gameObject place holder for the Compost trash type.
     // the trash object is directly referenced in the Unity engine 
     // through drag and drop
@@ -131,12 +150,12 @@ public class ARSpawnScript : MonoBehaviour
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
         // type
-        randomizer = (int)Random.Range(1f, 4f);
+        randomizer = (int)Random.Range(5f, 6f);
 
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
         // the right type of trash
-        Debug.Log(randomizer);
+        Debug.Log("NUMBER GENERATED: " + randomizer);
 
 
         // A switch statement that takes in our ramdom variable and uses that
@@ -149,22 +168,32 @@ public class ARSpawnScript : MonoBehaviour
         switch (randomizer)
         {
             case 1:
-                Debug.Log("IT SURE DOES GO HERE1");
+                Debug.Log("CASE 1");
                 spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Recycle T";
                 //spawnedObject = Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
                 //         rTrash.transform.parent = logo.transform;
                 break;
             case 2:
 
-                Debug.Log("IT SURE DOES GO HERE2");
+                Debug.Log("CASE 2");
                 spawnedObject = Instantiate(cTrash, Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Recycle T";
                 //spawnedObject = Instantiate(cTrash, new Vector3(0f, -35f, 200.4f), transform.rotation);
                 //cTrash.transform.parent = logo.transform;
                 break;
             case 3:
-
-                Debug.Log("IT SURE DOES GO HERE3");
                 spawnedObject = Instantiate(lTrash, Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Land Fill T";
+                break;
+            case 4:
+                spawnedObject = Instantiate(cheeseBurger, Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 5:
+                spawnedObject = Instantiate(eraser, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
                 break;
             // Default is used incase thier is an unforseen error computing the random
             // variable.
@@ -173,14 +202,16 @@ public class ARSpawnScript : MonoBehaviour
                 break;
 
         }
+        //spawnedObject.transform.position = Vector3.zero;
         spawnedObject.transform.SetParent(this.transform);
-        spawnedObject.transform.localPosition = Vector3.zero;
+        spawnedObject.transform.localPosition = new Vector3(0,0,1);
         spawnedObject.transform.localScale = Vector3.one;
 
         // Turn off Physics of the Object.
         Rigidbody spawnedObjectRigidbody = spawnedObject.GetComponent<Rigidbody>();
         spawnedObjectRigidbody.isKinematic = true; // Freeze Object Physics
 
+        currentObject = spawnedObject;
 
         //ToDo: Throw Object after input.
 

@@ -28,7 +28,7 @@ public class ARSpawnScript : MonoBehaviour
     public GameObject chipBag;
     public GameObject book;
     public GameObject toiletPaper;
-    public GameObject eraser;
+    public GameObject donut;
     public GameObject hat;
     public GameObject pencil;
     public GameObject paper;
@@ -40,6 +40,9 @@ public class ARSpawnScript : MonoBehaviour
     public GameObject tomato;
     public GameObject rubberDuck;
     public GameObject pen;
+    public GameObject coffeeLid;
+    public GameObject plasticBox;
+    public GameObject pillBottle;
 
     // This is a gameObject place holder for the Compost trash type.
     // the trash object is directly referenced in the Unity engine 
@@ -150,7 +153,7 @@ public class ARSpawnScript : MonoBehaviour
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
         // type
-        randomizer = (int)Random.Range(5f, 6f);
+        randomizer = (int)Random.Range(14, 15f);
 
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
@@ -191,10 +194,56 @@ public class ARSpawnScript : MonoBehaviour
                 spawnedObject.tag = "Compost T";
                 break;
             case 5:
-                spawnedObject = Instantiate(eraser, Vector3.zero, transform.rotation);
+                spawnedObject = Instantiate(donut, Vector3.zero, transform.rotation);
                 spawnedObject.transform.position.Set(0f, 0f, 1f);
                 spawnedObject.tag = "Compost T";
                 break;
+            case 6:
+                spawnedObject = Instantiate(pizzaBox, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 7:
+                spawnedObject = Instantiate(tomato, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 8:
+                spawnedObject = Instantiate(book, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Recycle T";
+                break;
+            case 9:
+                spawnedObject = Instantiate(glassBottle, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 3f);
+                spawnedObject.tag = "Recycle T";
+                break;
+            case 10:
+                spawnedObject = Instantiate(waterMelon, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 11:
+                spawnedObject = Instantiate(chipBag, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Land Fill T";
+                break;
+            case 12:
+                spawnedObject = Instantiate(coffeeLid, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Land Fill T";
+                break;
+            case 13:
+                spawnedObject = Instantiate(plasticBox, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Recycle T";
+                break;
+            case 14:
+                spawnedObject = Instantiate(pillBottle, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Land Fill T";
+                break;
+
             // Default is used incase thier is an unforseen error computing the random
             // variable.
             default:

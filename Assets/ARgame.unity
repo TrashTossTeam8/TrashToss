@@ -931,22 +931,26 @@ MonoBehaviour:
   waterBottle: {fileID: 0}
   cheeseBurger: {fileID: 1783042872796322, guid: 34e4bd914ed3e1a45836cb0fa6d3c0f1,
     type: 2}
-  pizzaBox: {fileID: 0}
-  chipBag: {fileID: 0}
-  book: {fileID: 0}
+  pizzaBox: {fileID: 1000012023308628, guid: 2a79153a0e896724caa73afa19f708c8, type: 2}
+  chipBag: {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827, type: 2}
+  book: {fileID: 1378627422154138, guid: 97c77a45786cb4c4ca727df16b4fcf7a, type: 2}
   toiletPaper: {fileID: 0}
-  eraser: {fileID: 1000011379175792, guid: 931dfc52fd271a846b05a6bf70694fca, type: 2}
+  donut: {fileID: 1000011379175792, guid: 931dfc52fd271a846b05a6bf70694fca, type: 2}
   hat: {fileID: 0}
   pencil: {fileID: 0}
   paper: {fileID: 100002, guid: d93bc5bf0eeb6fb4eb9b30ceabe8430d, type: 3}
-  glassBottle: {fileID: 0}
+  glassBottle: {fileID: 1872201053284882, guid: d106228ce7d6438488a1bef44e4b6d12,
+    type: 2}
   sodaCan: {fileID: 0}
-  waterMelon: {fileID: 0}
+  waterMelon: {fileID: 1000011216760202, guid: 78a6a596f3cdc2641b44bb3d371c8db0, type: 2}
   tree: {fileID: 0}
   pineApple: {fileID: 0}
-  tomato: {fileID: 0}
+  tomato: {fileID: 1000013284424148, guid: b29c3addc4240254785fef8671d1291b, type: 2}
   rubberDuck: {fileID: 1000011448446114, guid: 8155176e03f33f44884efb0dd767197c, type: 2}
   pen: {fileID: 0}
+  coffeeLid: {fileID: 1886117789159062, guid: abe363bf07a0e554786571d0eb9c3cad, type: 2}
+  plasticBox: {fileID: 1186205819126348, guid: 669370a98b13e85419d34fd58c3fc88f, type: 2}
+  pillBottle: {fileID: 1341795771979858, guid: 2ce503f6d3d62264ea1e720ad0ada231, type: 2}
   cTrash: {fileID: 1362920466948792, guid: 07f6068064ebf75408ed7215380432b1, type: 2}
   lTrash: {fileID: 1362920466948792, guid: 07f6068064ebf75408ed7215380432b1, type: 2}
   xMult: 10

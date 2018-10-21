@@ -153,7 +153,7 @@ public class ARSpawnScript : MonoBehaviour
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
         // type
-        randomizer = (int)Random.Range(14, 15f);
+        randomizer = (int)Random.Range(1, 15f);
 
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
@@ -256,6 +256,8 @@ public class ARSpawnScript : MonoBehaviour
         spawnedObject.transform.localPosition = new Vector3(0,0,1);
         spawnedObject.transform.localScale = Vector3.one;
 
+        
+
         // Turn off Physics of the Object.
         Rigidbody spawnedObjectRigidbody = spawnedObject.GetComponent<Rigidbody>();
         spawnedObjectRigidbody.isKinematic = true; // Freeze Object Physics
@@ -287,7 +289,7 @@ public class ARSpawnScript : MonoBehaviour
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
         float XaxisForce = xDelta * xMult;
         float YaxisForce = yDelta * yMult;
-        float ZaxisForce = ((endTime - startTime) / (distance)) * zMult;
+        float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
 
         Debug.Log("(" + startTime + ", " + startTime + ")");
         Debug.Log("Z Force: " + ZaxisForce);
@@ -309,6 +311,7 @@ public class ARSpawnScript : MonoBehaviour
 
         currentObject.transform.SetParent(vuforiaTargetObject.transform);
 
+
         currentObject = null;
 
         //Calls the wait a second funciton
@@ -326,4 +329,3 @@ public class ARSpawnScript : MonoBehaviour
     }
 
 }
-//new Vector3(0f,-35f,200.4f)

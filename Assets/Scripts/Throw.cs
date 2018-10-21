@@ -114,8 +114,7 @@ public class Throw : MonoBehaviour
 
         //Calls the wait a second funciton
         StartCoroutine(waitASecond());
-
-        Debug.Log("AY CAPTAIN");
+        
 
     }
 

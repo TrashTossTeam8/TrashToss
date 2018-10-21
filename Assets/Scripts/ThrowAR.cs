@@ -97,8 +97,7 @@ public class ThrowAR : MonoBehaviour
 
         Debug.Log("Force: " + ZaxisForce);
 
-
-        Debug.Log("AHOY ME BUCKO3");
+        
 		//The final arc calculation that governs the throw of the trash object.
 		calculatedForce = new Vector3(XaxisForce / 2, YaxisForce / 5, (ZaxisForce / 75) * 50f) / 10;
         Debug.Log ("CALCULATED FORCE: " + calculatedForce);

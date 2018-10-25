@@ -5,7 +5,7 @@ using UnityEngine;
 /*
 This class is used to allow the user to throw the object
 that this script is attatched to. When the player drags a
-piece of trash to throw it, this class should give a intuitive 
+piece of trash to throw it, this class should give a intuitive
 feel to the physics controlling the trash.
 */
 
@@ -48,10 +48,28 @@ public class Throw : MonoBehaviour
     /// </summary>
     private Vector3 calculatedForce;
 
+    public bool isThrowing = false;
+
     /// <summary>
     /// Trash object reference.
     /// </summary>
     public Rigidbody trash;
+
+    void Update()
+    {
+        //Debug.Log("isTrowing " + isThrowing);
+
+        if (isThrowing == true)
+        {
+
+            if (trash.transform.position.y >= 5)
+            {
+                trash.transform.Rotate(5f, 0, 0);
+            }
+        }
+
+
+    }
 
 
     /*
@@ -65,7 +83,7 @@ public class Throw : MonoBehaviour
         startTime = clock.getFrameNumber();
         startPos = Input.mousePosition;
     }
-    
+
 
     /*
     This method is called when the user lifts their finger from the screen. This method
@@ -78,6 +96,7 @@ public class Throw : MonoBehaviour
         endTime = clock.getFrameNumber();
         endPos = Input.mousePosition;
         throwBall();
+
     }
 
     /*
@@ -85,7 +104,7 @@ public class Throw : MonoBehaviour
     */
     void throwBall()
     {
-
+        isThrowing = true;
         //Distance Formula that measures the length of the user's finger swipe
         double distance = (Mathf.Sqrt(Mathf.Pow(endPos.x - startPos.x, 2) + Mathf.Pow(endPos.y - startPos.y, 2)));
 
@@ -94,7 +113,7 @@ public class Throw : MonoBehaviour
         XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))*10;
         YaxisForce = ((endPos.y - startPos.y)/(endTime - startTime))*10;
         //ZaxisForce = (endTime - startTime) * ((float)distance / 15);
-        ZaxisForce = ((((float)distance*50) / (endTime - startTime))*10)/50;
+        ZaxisForce = ((((float)distance) / (endTime - startTime))*10)/2.75f;
 
         Debug.Log("Force: " + ZaxisForce);
 
@@ -109,13 +128,30 @@ public class Throw : MonoBehaviour
         //trash.rotation()
         trash.velocity = calculatedForce;
 
+        //spin();
+        //trash.transform.Rotate(0, 90, 0);
+
+
+
         XaxisForce = 0;
         YaxisForce = 0;
 
         //Calls the wait a second funciton
         StartCoroutine(waitASecond());
-        
+        //isThrowing = false;
+    }
 
+    public void spin()
+    {
+        while(isThrowing)
+        {
+            trash.transform.Rotate(25f, 0, 0);
+            if(trash.transform.position.y <= 5)
+            {
+                isThrowing = false;
+                break;
+            }
+        }
     }
 
     //Function that pauses for a second before spawning a new ball
@@ -133,4 +169,3 @@ public class Throw : MonoBehaviour
     }
 
 }
-

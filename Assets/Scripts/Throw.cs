@@ -5,7 +5,7 @@ using UnityEngine;
 /*
 This class is used to allow the user to throw the object
 that this script is attatched to. When the player drags a
-piece of trash to throw it, this class should give a intuitive 
+piece of trash to throw it, this class should give a intuitive
 feel to the physics controlling the trash.
 */
 
@@ -61,13 +61,13 @@ public class Throw : MonoBehaviour
 
         if (isThrowing == true)
         {
-         
+
             if (trash.transform.position.y >= 5)
             {
                 trash.transform.Rotate(5f, 0, 0);
             }
         }
-        
+
 
     }
 
@@ -83,7 +83,7 @@ public class Throw : MonoBehaviour
         startTime = clock.getFrameNumber();
         startPos = Input.mousePosition;
     }
-    
+
 
     /*
     This method is called when the user lifts their finger from the screen. This method
@@ -96,7 +96,7 @@ public class Throw : MonoBehaviour
         endTime = clock.getFrameNumber();
         endPos = Input.mousePosition;
         throwBall();
- 
+
     }
 
     /*
@@ -169,4 +169,3 @@ public class Throw : MonoBehaviour
     }
 
 }
-

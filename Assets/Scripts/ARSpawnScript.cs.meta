@@ -1,11 +1,34 @@
 fileFormatVersion: 2
 guid: 62d250a022358b141bd84eafa197a886
-timeCreated: 1525753799
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - vuforiaTargetObject: {instanceID: 0}
+  - rTrash: {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827, type: 2}
+  - waterBottle: {instanceID: 0}
+  - cheeseBurger: {instanceID: 0}
+  - pizzaBox: {instanceID: 0}
+  - chipBag: {instanceID: 0}
+  - book: {instanceID: 0}
+  - toiletPaper: {instanceID: 0}
+  - donut: {instanceID: 0}
+  - hat: {instanceID: 0}
+  - pencil: {instanceID: 0}
+  - paper: {instanceID: 0}
+  - glassBottle: {instanceID: 0}
+  - sodaCan: {instanceID: 0}
+  - waterMelon: {instanceID: 0}
+  - tree: {instanceID: 0}
+  - pineApple: {instanceID: 0}
+  - tomato: {instanceID: 0}
+  - rubberDuck: {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827,
+      type: 2}
+  - pen: {instanceID: 0}
+  - battery: {fileID: 100000, guid: eef823a0d743d8942b54d878cc992b37, type: 3}
+  - cTrash: {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827, type: 2}
+  - lTrash: {fileID: 1000011448446114, guid: 8155176e03f33f44884efb0dd767197c, type: 2}
+  - clock: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

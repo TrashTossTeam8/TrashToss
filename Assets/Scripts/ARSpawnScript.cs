@@ -287,8 +287,8 @@ public class ARSpawnScript : MonoBehaviour
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        float XaxisForce = xDelta * xMult;
-        float YaxisForce = yDelta * yMult;
+        float XaxisForce = (xDelta * xMult) * 1.5f;
+        float YaxisForce = (yDelta * yMult) * 1.5f;
         float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
 
         Debug.Log("(" + startTime + ", " + startTime + ")");

@@ -14,7 +14,7 @@ game will find their functionality.
 public class GameManagment : MonoBehaviour {
 
     public static GameManagment instance;
-    TextManager tm = new TextManager();
+    //TextManager tm = new TextManager();
 /*
 This Method is used to return the user to the MainMenu
 */ 

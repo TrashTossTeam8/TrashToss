@@ -47,31 +47,15 @@ trash for the player to sort at the begining of the game.
 	}
 
 /*
-This method is used to randomally spawn a piece of trash so that the trash will
+This method is used to randomly spawn a piece of trash so that the trash will
 not always have the same type (recyle, compost, landfill). Using an int that we
 randomize to a value between 1 and 3 which then determines through a switch case
 which type of trash will spawn.
 */ 
 	void Spawner()
 	{
-
-        //List<GameObject> gameObjects = new List<GameObject>();
-
-        //gameObjects.Add(waterBottle);
-        //gameObjects.Add(pizzaBox);
-        //gameObjects.Add(chipBag);
-        //gameObjects.Add(cheeseBurger);
+		randomizer = (int)Random.Range (1f, 18f);
         
-        
-		// Randomizing the int variable to a whole integer
-		// between the values of 1 and 3 thus determining trash
-		// type
-		randomizer = (int)Random.Range (3f, 4f);
-
-		// Write to concel the random variable value in order
-		// to tell if our code is working correclty and spawning
-		// the right type of trash
-		Debug.Log (randomizer);
 
 		// A switch statement that takes in our ramdom variable and uses that
 		// to determine which type of trash to spawn (1 is recycle, 2 is compost,

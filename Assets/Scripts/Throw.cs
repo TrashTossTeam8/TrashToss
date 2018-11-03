@@ -110,37 +110,26 @@ public class Throw : MonoBehaviour
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))*10;
-        //YaxisForce = ((endPos.y - startPos.y)/(endTime - startTime))*10;
-        //ZaxisForce = (endTime - startTime) * ((float)distance / 15);
-        //ZaxisForce = ((((float)distance) / (endTime - startTime))*10)/2.75f;
-        YaxisForce = 8.0f;
-        ZaxisForce = 5.5f;
+        XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))/2;
+        YaxisForce = 10.0f;
+        ZaxisForce = 11.0f;
 
         Debug.Log("Force: " + ZaxisForce);
 
 
 
         //The final arc calculation that governs the throw of the trash object.
-        //calculatedForce = new Vector3(XaxisForce/2, YaxisForce / 5, (ZaxisForce / 75) * 50f)/10;
-        calculatedForce = new Vector3(XaxisForce / 2, YaxisForce / 5, (ZaxisForce) * 50f) / 10;
+        calculatedForce = new Vector3(XaxisForce, YaxisForce, ZaxisForce);
 
         //Applies gravity and the calculated arc to the trash object
         trash.useGravity = true;
-        //trash.rotation()
         trash.velocity = calculatedForce;
-
-        //spin();
-        //trash.transform.Rotate(0, 90, 0);
-
-
 
         XaxisForce = 0;
         YaxisForce = 0;
 
         //Calls the wait a second funciton
         StartCoroutine(waitASecond());
-        //isThrowing = false;
     }
 
     public void spin()

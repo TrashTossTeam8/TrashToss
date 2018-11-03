@@ -153,7 +153,7 @@ public class ARSpawnScript : MonoBehaviour
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
         // type
-        randomizer = (int)Random.Range(1, 15f);
+        randomizer = (int)Random.Range(3, 4f);
 
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
@@ -279,27 +279,53 @@ public class ARSpawnScript : MonoBehaviour
             return;
         }
 
+        Vector3 delta = Camera.main.transform.position;
+        Debug.Log("CAMERA POSITION: " + Camera.main.transform.position.z);
+
         float xDelta = (endPos.x - startPos.x) / Screen.width;
         float yDelta = (endPos.y - startPos.y) / Screen.height;
 
         //Distance Formula that measures the length of the user's finger swipe
-        float distance = (Mathf.Sqrt(Mathf.Pow(xDelta, 2) + Mathf.Pow(yDelta, 2)));
+        //float distance = (Mathf.Sqrt(Mathf.Pow(xDelta, 2) + Mathf.Pow(yDelta, 2)));
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
         float XaxisForce = (xDelta * xMult) * 1.5f;
-        float YaxisForce = (yDelta * yMult) * 1.5f;
-        float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
+        //float YaxisForce = (yDelta * yMult) * 1.5f;
+        //float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
+        float YaxisForce = 8.0f;
 
-        Debug.Log("(" + startTime + ", " + startTime + ")");
-        Debug.Log("Z Force: " + ZaxisForce);
+        float zCoordinate = Camera.main.transform.position.z;
+        float imageTargetZLocation = 10;
+
+        float distance = imageTargetZLocation - zCoordinate;
+
+        if(distance < 0)
+        {
+            distance = -distance;
+        }
+        
+
+        //float ZaxisForce = 1.25f * distance;
+
+        float ZaxisForce = 0.40f * distance;
+
+        if(distance > 20)
+        {
+            ZaxisForce = 0.45f * distance;
+        }
+
+        Debug.Log("FORCE: " + distance);
+
+        //Debug.Log("(" + startTime + ", " + startTime + ")");
+        //Debug.Log("Z Force: " + ZaxisForce);
 
 
 
         //The final arc calculation that governs the throw of the trash object.
         //var calculatedForce = new Vector3(XaxisForce / 10, YaxisForce / 15, (ZaxisForce / 300) * 50f) * 2;
         var calculatedForce = new Vector3(XaxisForce, YaxisForce , ZaxisForce);
-        Debug.Log("CALCULATED FORCE: " + calculatedForce);
+        //Debug.Log("CALCULATED FORCE: " + calculatedForce);
 
         Rigidbody spawnObjRB = currentObject.GetComponent<Rigidbody>();
 

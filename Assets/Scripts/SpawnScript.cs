@@ -43,18 +43,19 @@ trash for the player to sort at the begining of the game.
 */ 
 	public void Start ()
 	{
-		Spawner ();	
+		Spawner();
 	}
+    
 
-/*
-This method is used to randomly spawn a piece of trash so that the trash will
-not always have the same type (recyle, compost, landfill). Using an int that we
-randomize to a value between 1 and 3 which then determines through a switch case
-which type of trash will spawn.
-*/ 
-	void Spawner()
+    /*
+    This method is used to randomly spawn a piece of trash so that the trash will
+    not always have the same type (recyle, compost, landfill). Using an int that we
+    randomize to a value between 1 and 3 which then determines through a switch case
+    which type of trash will spawn.
+    */
+    void Spawner()
 	{
-		randomizer = (int)Random.Range (1f, 18f);
+		randomizer = (int)Random.Range (1f, 2f);
         
 
 		// A switch statement that takes in our ramdom variable and uses that

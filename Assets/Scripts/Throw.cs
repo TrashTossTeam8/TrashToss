@@ -30,9 +30,7 @@ public class Throw : MonoBehaviour
     public Vector2 endPos;
 
     public SpawnScript spawn;
-
-    public ARSpawnScript otherSpawn;
-
+    
     public Timer clock;
 
 
@@ -70,8 +68,7 @@ public class Throw : MonoBehaviour
 
 
     }
-
-
+    
     /*
     This method is called when the user clicks down on their mouse on the object
     that this script is attatched to. All it does is keep track of the position of the user's finger
@@ -96,7 +93,6 @@ public class Throw : MonoBehaviour
         endTime = clock.getFrameNumber();
         endPos = Input.mousePosition;
         throwBall();
-
     }
 
     /*
@@ -152,10 +148,6 @@ public class Throw : MonoBehaviour
         if (spawn != null)
         {
             spawn.Start();
-        }
-        else
-        {
-            otherSpawn.Start();
         }
     }
 

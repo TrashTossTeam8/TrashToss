@@ -117,8 +117,7 @@ trash for the player to sort at the begining of the game.
         case 17:
             Instantiate(pen, new Vector3(-.08f, 10f, 1f), transform.rotation);
             break;
-
-
+                
             // Default is used incase there is an unforseen error computing the random
             // variable.
             default:

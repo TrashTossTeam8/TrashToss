@@ -174,20 +174,16 @@ public class ARSpawnScript : MonoBehaviour
                 Debug.Log("CASE 1");
                 spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
                 spawnedObject.tag = "Recycle T";
-                //spawnedObject = Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
-                //         rTrash.transform.parent = logo.transform;
                 break;
             case 2:
-
                 Debug.Log("CASE 2");
                 spawnedObject = Instantiate(cTrash, Vector3.zero, transform.rotation);
                 spawnedObject.tag = "Recycle T";
-                //spawnedObject = Instantiate(cTrash, new Vector3(0f, -35f, 200.4f), transform.rotation);
-                //cTrash.transform.parent = logo.transform;
                 break;
             case 3:
-                spawnedObject = Instantiate(lTrash, Vector3.zero, transform.rotation);
-                spawnedObject.tag = "Land Fill T";
+                Debug.Log("CASE 3");
+                spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Recycle T";
                 break;
             case 4:
                 spawnedObject = Instantiate(cheeseBurger, Vector3.zero, transform.rotation);
@@ -310,15 +306,13 @@ public class ARSpawnScript : MonoBehaviour
 
         float ZaxisForce = 0.40f * distance;
 
-        if(distance > 20)
+        if(distance > 15)
         {
             ZaxisForce = 0.45f * distance;
         }
 
         Debug.Log("FORCE: " + distance);
-
-        //Debug.Log("(" + startTime + ", " + startTime + ")");
-        //Debug.Log("Z Force: " + ZaxisForce);
+        
 
 
 

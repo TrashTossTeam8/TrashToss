@@ -602,7 +602,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 94721084}
@@ -755,7 +754,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 104705093}
@@ -951,7 +949,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 194338731}
@@ -1109,7 +1106,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 242733307}
@@ -1177,7 +1173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4486805393137722, guid: 7e2a8ac4bf9a96e44b9665f9c91baec7, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e2a8ac4bf9a96e44b9665f9c91baec7, type: 2}
@@ -1223,7 +1219,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 310997464}
@@ -1254,6 +1249,106 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!1001 &414384197
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224218160467035370, guid: 231a3225f9084fc41919aa51a3c3e279,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 231a3225f9084fc41919aa51a3c3e279, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &455625236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1598,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 473242265}
@@ -1582,7 +1676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4329300818490574, guid: f11691a04399f12409589e0f7ea443a3, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114417831521608200, guid: f11691a04399f12409589e0f7ea443a3,
         type: 2}
@@ -2009,7 +2103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687060316 stripped
 GameObject:
@@ -2046,7 +2140,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 687060321}
@@ -2315,7 +2408,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 862459608}
@@ -2386,7 +2478,7 @@ Transform:
   - {fileID: 2001294343}
   - {fileID: 1653395603}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023449878
 GameObject:
@@ -2607,7 +2699,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1263024481}
@@ -2655,7 +2746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1270466860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2728,7 +2819,7 @@ RectTransform:
   - {fileID: 2050337257}
   - {fileID: 1938967448}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2774,7 +2865,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1294590076}
@@ -3075,7 +3165,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1354211144}
@@ -3136,7 +3225,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1356015708}
@@ -3220,7 +3308,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4891627091839320, guid: 1f601922a541716498c333bd3a403a3c, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4249063236096896, guid: 1f601922a541716498c333bd3a403a3c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3310,7 +3398,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1455699951}
@@ -3420,7 +3507,7 @@ Transform:
   m_LocalScale: {x: 200, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519159977 stripped
 GameObject:
@@ -3457,7 +3544,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1519159982}
@@ -3615,7 +3701,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1646021260}
@@ -3681,7 +3766,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 1653395607}
@@ -4460,7 +4544,6 @@ MonoBehaviour:
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   spawn: {fileID: 6390022}
-  otherSpawn: {fileID: 0}
   clock: {fileID: 855416245}
   isThrowing: 0
   trash: {fileID: 2001294348}

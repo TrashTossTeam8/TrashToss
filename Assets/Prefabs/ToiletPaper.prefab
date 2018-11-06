@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4707181940100742}
   - component: {fileID: 54413841914060556}
   - component: {fileID: 114978328458758436}
-  - component: {fileID: 114602018174990602}
+  - component: {fileID: 114676303369308134}
   m_Layer: 0
   m_Name: ToiletPaper
   m_TagString: Recycle T
@@ -145,7 +145,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 1acaaf86318fa854d91d6b1aab1551cb, type: 3}
---- !u!114 &114602018174990602
+--- !u!114 &114676303369308134
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,15 +153,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777789014883370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e896c4c80fe83459bcfebb44807e1b, type: 3}
+  m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: 0, y: 0}
-  endPos: {x: 0, y: 0}
-  spawn: {fileID: 0}
-  clock: {fileID: 0}
-  isThrowing: 0
-  trash: {fileID: 54413841914060556}
 --- !u!114 &114978328458758436
 MonoBehaviour:
   m_ObjectHideFlags: 1

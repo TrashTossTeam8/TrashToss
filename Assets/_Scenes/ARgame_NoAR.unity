@@ -229,7 +229,7 @@ RectTransform:
   m_LocalScale: {x: 0.044999998, y: 0.045000028, z: 0.045000028}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -411,7 +411,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &480895881
 AudioSource:
@@ -785,11 +785,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1649275959}
   - {fileID: 408979965}
   - {fileID: 1465428622}
   - {fileID: 1944271389}
   - {fileID: 480895880}
-  - {fileID: 1649275959}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   - {fileID: 1783042872796322, guid: 34e4bd914ed3e1a45836cb0fa6d3c0f1, type: 2}
   landfillObjects:
   - {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827, type: 2}
-  debugUseTester: 1
+  debugUseTester: 0
   testTrash: {fileID: 1178113468051128, guid: 699661bf4e4e72b4a8edfb023a213718, type: 2}
   xMult: 1
   yMult: 2
@@ -1139,7 +1139,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1465428623
 MeshFilter:
@@ -1212,7 +1212,7 @@ RectTransform:
   m_LocalScale: {x: 0.044999998, y: 0.045000028, z: 0.045000028}
   m_Children: []
   m_Father: {fileID: 1028734264}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   timerDuration: 60
   currentTime: 60
   frameCount: 0
-  debugDontFinish: 1
+  debugDontFinish: 0
   OnTimeFinished:
     m_PersistentCalls:
       m_Calls:
@@ -1613,7 +1613,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4891627091839320, guid: 1f601922a541716498c333bd3a403a3c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4891627091839320, guid: 1f601922a541716498c333bd3a403a3c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y

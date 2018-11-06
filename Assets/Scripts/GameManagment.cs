@@ -46,7 +46,7 @@ can play the game
 */ 
 	public void OnOfflineButton()
 	{
-		Application.LoadLevel("Main");
+		Application.LoadLevel("ARgame_NoAR");
 	}
 
 /*

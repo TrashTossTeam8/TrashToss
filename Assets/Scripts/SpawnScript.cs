@@ -66,6 +66,8 @@ which type of trash will spawn.
 		// Randomizing the int variable to a whole integer
 		// between the values of 1 and 3 thus determining trash
 		// type
+
+        // We only use the chip bag object during testing conditions in order to be more efficient
 		randomizer = (int)Random.Range (3f, 4f);
 
 		// Write to concel the random variable value in order

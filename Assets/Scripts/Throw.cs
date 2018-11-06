@@ -57,18 +57,16 @@ public class Throw : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("isTrowing " + isThrowing);
-
+        // We detect if the trash object is thrown to not start the rotation too early
         if (isThrowing == true)
         {
-
+            // We check if the trash object hasn't reach a low position to stop the rotation when it is on the ground
             if (trash.transform.position.y >= 5)
             {
+                // We take into account a rotation on the 3 axis to add a more realistic effect
                 trash.transform.Rotate(5f, YaxisForce/100, ZaxisForce/100);
             }
         }
-
-
     }
 
 
@@ -141,7 +139,7 @@ public class Throw : MonoBehaviour
         //isThrowing = false;
     }
 
-    public void spin()
+    /*public void spin()
     {
         while(isThrowing)
         {
@@ -152,7 +150,7 @@ public class Throw : MonoBehaviour
                 break;
             }
         }
-    }
+    }*/
 
     //Function that pauses for a second before spawning a new ball
     IEnumerator waitASecond()

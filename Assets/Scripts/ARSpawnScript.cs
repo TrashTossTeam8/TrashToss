@@ -20,49 +20,53 @@ public class ARSpawnScript : MonoBehaviour
     // This is a gameObject place holder for the recycable trash type.
     // the trash object is directly referenced in the Unity engine 
     // through drag and drop
-    public GameObject rTrash;
 
-    public GameObject waterBottle;
-    public GameObject cheeseBurger;
-    public GameObject pizzaBox;
-    public GameObject chipBag;
-    public GameObject book;
-    public GameObject toiletPaper;
-    public GameObject donut;
-    public GameObject hat;
-    public GameObject pencil;
-    public GameObject paper;
-    public GameObject glassBottle;
-    public GameObject sodaCan;
-    public GameObject waterMelon;
-    public GameObject tree;
-    public GameObject pineApple;
-    public GameObject tomato;
-    public GameObject rubberDuck;
-    public GameObject pen;
-    public GameObject coffeeLid;
-    public GameObject plasticBox;
-    public GameObject pillBottle;
+    [Header("TrashObjects")]
+    public GameObject[] recyclableObjects;
+    public GameObject[] compostObjects;
+    public GameObject[] landfillObjects;
+
+    public bool debugUseTester;
+    public GameObject testTrash;
+
+    //public GameObject waterBottle;
+    //public GameObject cheeseBurger;
+    //public GameObject pizzaBox;
+    //public GameObject chipBag;
+    //public GameObject book;
+    //public GameObject toiletPaper;
+    //public GameObject donut;
+    //public GameObject hat;
+    //public GameObject pencil;
+    //public GameObject paper;
+    //public GameObject glassBottle;
+    //public GameObject sodaCan;
+    //public GameObject waterMelon;
+    //public GameObject tree;
+    //public GameObject pineApple;
+    //public GameObject tomato;
+    //public GameObject rubberDuck;
+    //public GameObject pen;
+    //public GameObject coffeeLid;
+    //public GameObject plasticBox;
+    //public GameObject pillBottle;
 
     // This is a gameObject place holder for the Compost trash type.
-    // the trash object is directly referenced in the Unity engine 
-    // through drag and drop
-    public GameObject cTrash;
+    //// the trash object is directly referenced in the Unity engine 
+    //// through drag and drop
+    //public GameObject cTrash;
 
-    // This is a gameObject place holder for the Land Fill trash type.
-    // the trash object is directly referenced in the Unity engine 
-    // through drag and drop
-    public GameObject lTrash;
+    //// This is a gameObject place holder for the Land Fill trash type.
+    //// the trash object is directly referenced in the Unity engine 
+    //// through drag and drop
+    //public GameObject lTrash;
 
     //public GameObject[] rTrashArray; // array of available recyclables
 
-    public float xMult = 2f;
-    public float yMult = 2f;
-    public float zMult = 2f;
-
-    // This int variable is used to insure that the type of trash 
-    // spawned is random.
-    private int randomizer;
+    [Header("Throw Variables")]
+    public float xMult = 1f;
+    public float yMult = 1f;
+    public float zMult = 1f; //0,4
 
     // Am I holding an object?
     public GameObject currentObject { get; private set; }
@@ -149,11 +153,15 @@ public class ARSpawnScript : MonoBehaviour
     */
     public GameObject SpawnTrash()
     {
-        
+
+        // This int variable is used to insure that the type of trash 
+        // spawned is random.
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
         // type
-        randomizer = (int)Random.Range(3, 4f);
+        int randomizer = Random.Range(0, 3);
+
+
 
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
@@ -168,88 +176,38 @@ public class ARSpawnScript : MonoBehaviour
         // object at that location. A rotation type is also passed in due to neccesity,
         // Unity needs that information to call instantiate at a specific location.
         GameObject spawnedObject;
+        if(debugUseTester && testTrash != null)
+        {
+            randomizer = -1;
+        }
         switch (randomizer)
         {
-            case 1:
-                Debug.Log("CASE 1");
-                spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
+            default:
+            case 0:
+                // Spawn Recycling
+                spawnedObject = Instantiate(recyclableObjects[Random.Range(0, recyclableObjects.Length - 1)], Vector3.zero, transform.rotation);
                 spawnedObject.tag = "Recycle T";
+                break;
+            case 1:
+                // Spawn Compost
+                spawnedObject = Instantiate(compostObjects[Random.Range(0, compostObjects.Length - 1)], Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Compost T";
                 break;
             case 2:
-                Debug.Log("CASE 2");
-                spawnedObject = Instantiate(cTrash, Vector3.zero, transform.rotation);
-                spawnedObject.tag = "Recycle T";
-                break;
-            case 3:
-                Debug.Log("CASE 3");
-                spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
-                spawnedObject.tag = "Recycle T";
-                break;
-            case 4:
-                spawnedObject = Instantiate(cheeseBurger, Vector3.zero, transform.rotation);
-                spawnedObject.tag = "Compost T";
-                break;
-            case 5:
-                spawnedObject = Instantiate(donut, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Compost T";
-                break;
-            case 6:
-                spawnedObject = Instantiate(pizzaBox, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Compost T";
-                break;
-            case 7:
-                spawnedObject = Instantiate(tomato, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Compost T";
-                break;
-            case 8:
-                spawnedObject = Instantiate(book, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Recycle T";
-                break;
-            case 9:
-                spawnedObject = Instantiate(glassBottle, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 3f);
-                spawnedObject.tag = "Recycle T";
-                break;
-            case 10:
-                spawnedObject = Instantiate(waterMelon, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Compost T";
-                break;
-            case 11:
-                spawnedObject = Instantiate(chipBag, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                // Spawn Landfill
+                spawnedObject = Instantiate(landfillObjects[Random.Range(0, landfillObjects.Length - 1)], Vector3.zero, transform.rotation);
                 spawnedObject.tag = "Land Fill T";
                 break;
-            case 12:
-                spawnedObject = Instantiate(coffeeLid, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Land Fill T";
+            case -1:
+                spawnedObject = Instantiate(testTrash, Vector3.zero, transform.rotation);
+                //spawnedObject.tag = "Recycle T";
                 break;
-            case 13:
-                spawnedObject = Instantiate(plasticBox, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Recycle T";
-                break;
-            case 14:
-                spawnedObject = Instantiate(pillBottle, Vector3.zero, transform.rotation);
-                spawnedObject.transform.position.Set(0f, 0f, 1f);
-                spawnedObject.tag = "Land Fill T";
-                break;
-
-            // Default is used incase thier is an unforseen error computing the random
-            // variable.
-            default:
-                spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
-                break;
-
         }
+
+
         //spawnedObject.transform.position = Vector3.zero;
         spawnedObject.transform.SetParent(this.transform);
-        spawnedObject.transform.localPosition = new Vector3(0,0,1);
+        spawnedObject.transform.localPosition = new Vector3(0,0,1); // Put object in front of us.
         spawnedObject.transform.localScale = Vector3.one;
 
         
@@ -278,6 +236,7 @@ public class ARSpawnScript : MonoBehaviour
         Vector3 delta = Camera.main.transform.position;
         Debug.Log("CAMERA POSITION: " + Camera.main.transform.position.z);
 
+        // Screen Drag deltas
         float xDelta = (endPos.x - startPos.x) / Screen.width;
         float yDelta = (endPos.y - startPos.y) / Screen.height;
 
@@ -286,30 +245,30 @@ public class ARSpawnScript : MonoBehaviour
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        float XaxisForce = (xDelta * xMult) * 1.5f;
-        //float YaxisForce = (yDelta * yMult) * 1.5f;
+        float XaxisForce = (xDelta * xMult);
+        float YaxisForce = (yDelta * yMult);
         //float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
-        float YaxisForce = 8.0f;
 
-        float zCoordinate = Camera.main.transform.position.z;
-        float imageTargetZLocation = 10;
+        //float YaxisForce = yForce;
 
-        float distance = imageTargetZLocation - zCoordinate;
+        //float zCoordinate = Camera.main.transform.position.z;
+        //float imageTargetZLocation = 10;
 
-        if(distance < 0)
-        {
-            distance = -distance;
-        }
-        
+
+        Vector3 cameraPos = Camera.main.transform.position;
+        Vector3 projectedCamPos = Vector3.Project(cameraPos, Vector3.up);
+        //cameraPos = new Vector3(cameraPos.x, 0, cameraPos.z);
+
+        float distance = Vector3.Distance(projectedCamPos, Vector3.zero);
+        //distance = projectedCamPos.magnitude;
+
+
+        //float distance = Mathf.Abs(imageTargetZLocation - zCoordinate);
 
         //float ZaxisForce = 1.25f * distance;
 
-        float ZaxisForce = 0.40f * distance;
-
-        if(distance > 15)
-        {
-            ZaxisForce = 0.45f * distance;
-        }
+        //float ZaxisForce = zMult * distance;
+        float ZaxisForce = zMult * YaxisForce;
 
         Debug.Log("FORCE: " + distance);
         
@@ -321,20 +280,26 @@ public class ARSpawnScript : MonoBehaviour
         var calculatedForce = new Vector3(XaxisForce, YaxisForce , ZaxisForce);
         //Debug.Log("CALCULATED FORCE: " + calculatedForce);
 
+        // Transforms the camera-relative force into world space.
+        Vector3 worldSpaceForceDirection = Camera.main.transform.TransformDirection(calculatedForce);
+        calculatedForce = worldSpaceForceDirection * calculatedForce.magnitude;
+
         Rigidbody spawnObjRB = currentObject.GetComponent<Rigidbody>();
 
         //Applies gravity and the calculated arc to the trash object
 
         spawnObjRB.useGravity = true;
         spawnObjRB.isKinematic = false;
+
         spawnObjRB.velocity = calculatedForce;
 
         currentObject.transform.SetParent(vuforiaTargetObject.transform);
 
-
+        startPos = Vector2.zero;
+        endPos = Vector2.zero;
         currentObject = null;
 
-        //Calls the wait a second funciton
+        //Calls the 'wait a second' funciton
         StartCoroutine(CoWaitToSpawnTrash(spawnWaitTime));
 
     }

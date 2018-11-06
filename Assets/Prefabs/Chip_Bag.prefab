@@ -198,13 +198,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4689788723845368}
   - component: {fileID: 54173895415182358}
-  - component: {fileID: 135164074031271772}
   - component: {fileID: 114716409738519786}
   - component: {fileID: 114015496897516958}
   m_Layer: 0
   m_Name: Chip_Bag
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -329,14 +328,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1083504630935476}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.011415993, y: 0.99236894, z: -0.11937006, w: -0.028711827}
+  m_LocalPosition: {x: -0.14204642, y: -0.11068599, z: -0.0073549105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4465378823022194}
   m_Father: {fileID: 4689788723845368}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.743001, y: 183.202, z: -0.93200004}
 --- !u!4 &4579161917008934
 Transform:
   m_ObjectHideFlags: 1
@@ -742,15 +741,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2df1306936349842aa10113e9d639d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135164074031271772
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1628078675167962}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.05
-  m_Center: {x: 0, y: 0, z: 0}

@@ -30,9 +30,7 @@ public class Throw : MonoBehaviour
     public Vector2 endPos;
 
     public SpawnScript spawn;
-
-    public ARSpawnScript otherSpawn;
-
+    
     public Timer clock;
 
 
@@ -68,8 +66,7 @@ public class Throw : MonoBehaviour
             }
         }
     }
-
-
+    
     /*
     This method is called when the user clicks down on their mouse on the object
     that this script is attatched to. All it does is keep track of the position of the user's finger
@@ -94,7 +91,6 @@ public class Throw : MonoBehaviour
         endTime = clock.getFrameNumber();
         endPos = Input.mousePosition;
         throwBall();
-
     }
 
     /*
@@ -108,35 +104,26 @@ public class Throw : MonoBehaviour
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))*10;
-        YaxisForce = ((endPos.y - startPos.y)/(endTime - startTime))*10;
-        //ZaxisForce = (endTime - startTime) * ((float)distance / 15);
-        ZaxisForce = ((((float)distance) / (endTime - startTime))*10)/2.75f;
+        XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))/2;
+        YaxisForce = 10.0f;
+        ZaxisForce = 11.0f;
 
         Debug.Log("Force: " + ZaxisForce);
 
 
 
         //The final arc calculation that governs the throw of the trash object.
-        //calculatedForce = new Vector3(XaxisForce/2, YaxisForce / 5, (ZaxisForce / 75) * 50f)/10;
-        calculatedForce = new Vector3(XaxisForce / 2, YaxisForce / 5, (ZaxisForce / 75) * 50f) / 10;
+        calculatedForce = new Vector3(XaxisForce, YaxisForce, ZaxisForce);
 
         //Applies gravity and the calculated arc to the trash object
         trash.useGravity = true;
-        //trash.rotation()
         trash.velocity = calculatedForce;
-
-        //spin();
-        //trash.transform.Rotate(0, 90, 0);
-
-
 
         XaxisForce = 0;
         YaxisForce = 0;
 
         //Calls the wait a second funciton
         StartCoroutine(waitASecond());
-        //isThrowing = false;
     }
 
     /*public void spin()
@@ -159,10 +146,6 @@ public class Throw : MonoBehaviour
         if (spawn != null)
         {
             spawn.Start();
-        }
-        else
-        {
-            otherSpawn.Start();
         }
     }
 

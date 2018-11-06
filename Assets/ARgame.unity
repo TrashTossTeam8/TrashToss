@@ -1167,9 +1167,9 @@ MonoBehaviour:
   - {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827, type: 2}
   debugUseTester: 1
   testTrash: {fileID: 1783042872796322, guid: 34e4bd914ed3e1a45836cb0fa6d3c0f1, type: 2}
-  xMult: 8
+  xMult: 1
   yMult: 2
-  zMult: 1
+  zMult: 1.5
   startPos: {x: 0, y: 0}
   endPos: {x: 0, y: 0}
   clock: {fileID: 0}

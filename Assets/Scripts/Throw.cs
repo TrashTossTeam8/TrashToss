@@ -5,7 +5,7 @@ using UnityEngine;
 /*
 This class is used to allow the user to throw the object
 that this script is attatched to. When the player drags a
-piece of trash to throw it, this class should give a intuitive 
+piece of trash to throw it, this class should give a intuitive
 feel to the physics controlling the trash.
 */
 
@@ -30,9 +30,7 @@ public class Throw : MonoBehaviour
     public Vector2 endPos;
 
     public SpawnScript spawn;
-
-    public ARSpawnScript otherSpawn;
-
+    
     public Timer clock;
 
 
@@ -48,12 +46,29 @@ public class Throw : MonoBehaviour
     /// </summary>
     private Vector3 calculatedForce;
 
+    public bool isThrowing = false;
+
     /// <summary>
     /// Trash object reference.
     /// </summary>
     public Rigidbody trash;
 
+    void Update()
+    {
+        //Debug.Log("isTrowing " + isThrowing);
 
+        if (isThrowing == true)
+        {
+
+            if (trash.transform.position.y >= 5)
+            {
+                trash.transform.Rotate(5f, 0, 0);
+            }
+        }
+
+
+    }
+    
     /*
     This method is called when the user clicks down on their mouse on the object
     that this script is attatched to. All it does is keep track of the position of the user's finger
@@ -65,7 +80,7 @@ public class Throw : MonoBehaviour
         startTime = clock.getFrameNumber();
         startPos = Input.mousePosition;
     }
-    
+
 
     /*
     This method is called when the user lifts their finger from the screen. This method
@@ -85,28 +100,25 @@ public class Throw : MonoBehaviour
     */
     void throwBall()
     {
-
+        isThrowing = true;
         //Distance Formula that measures the length of the user's finger swipe
         double distance = (Mathf.Sqrt(Mathf.Pow(endPos.x - startPos.x, 2) + Mathf.Pow(endPos.y - startPos.y, 2)));
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))*10;
-        YaxisForce = ((endPos.y - startPos.y)/(endTime - startTime))*10;
-        //ZaxisForce = (endTime - startTime) * ((float)distance / 15);
-        ZaxisForce = ((((float)distance) / (endTime - startTime))*10)/50;
+        XaxisForce = ((endPos.x - startPos.x)/(endTime - startTime))/2;
+        YaxisForce = 10.0f;
+        ZaxisForce = 11.0f;
 
         Debug.Log("Force: " + ZaxisForce);
 
 
 
         //The final arc calculation that governs the throw of the trash object.
-        //calculatedForce = new Vector3(XaxisForce/2, YaxisForce / 5, (ZaxisForce / 75) * 50f)/10;
-        calculatedForce = new Vector3(XaxisForce / 2, YaxisForce / 5, (ZaxisForce / 75) * 50f) / 10;
+        calculatedForce = new Vector3(XaxisForce, YaxisForce, ZaxisForce);
 
         //Applies gravity and the calculated arc to the trash object
         trash.useGravity = true;
-        //trash.rotation()
         trash.velocity = calculatedForce;
 
         XaxisForce = 0;
@@ -114,7 +126,19 @@ public class Throw : MonoBehaviour
 
         //Calls the wait a second funciton
         StartCoroutine(waitASecond());
+    }
 
+    public void spin()
+    {
+        while(isThrowing)
+        {
+            trash.transform.Rotate(25f, 0, 0);
+            if(trash.transform.position.y <= 5)
+            {
+                isThrowing = false;
+                break;
+            }
+        }
     }
 
     //Function that pauses for a second before spawning a new ball
@@ -125,11 +149,6 @@ public class Throw : MonoBehaviour
         {
             spawn.Start();
         }
-        else
-        {
-            otherSpawn.Start();
-        }
     }
 
 }
-

@@ -43,35 +43,20 @@ trash for the player to sort at the begining of the game.
 */ 
 	public void Start ()
 	{
-		Spawner ();	
+		Spawner();
 	}
+    
 
-/*
-This method is used to randomally spawn a piece of trash so that the trash will
-not always have the same type (recyle, compost, landfill). Using an int that we
-randomize to a value between 1 and 3 which then determines through a switch case
-which type of trash will spawn.
-*/ 
-	void Spawner()
+    /*
+    This method is used to randomly spawn a piece of trash so that the trash will
+    not always have the same type (recyle, compost, landfill). Using an int that we
+    randomize to a value between 1 and 3 which then determines through a switch case
+    which type of trash will spawn.
+    */
+    void Spawner()
 	{
-
-        //List<GameObject> gameObjects = new List<GameObject>();
-
-        //gameObjects.Add(waterBottle);
-        //gameObjects.Add(pizzaBox);
-        //gameObjects.Add(chipBag);
-        //gameObjects.Add(cheeseBurger);
+		randomizer = (int)Random.Range (1f, 2f);
         
-        
-		// Randomizing the int variable to a whole integer
-		// between the values of 1 and 3 thus determining trash
-		// type
-		randomizer = (int)Random.Range (1f, 18f);
-
-		// Write to concel the random variable value in order
-		// to tell if our code is working correclty and spawning
-		// the right type of trash
-		Debug.Log (randomizer);
 
 		// A switch statement that takes in our ramdom variable and uses that
 		// to determine which type of trash to spawn (1 is recycle, 2 is compost,
@@ -132,8 +117,7 @@ which type of trash will spawn.
         case 17:
             Instantiate(pen, new Vector3(-.08f, 10f, 1f), transform.rotation);
             break;
-
-
+                
             // Default is used incase there is an unforseen error computing the random
             // variable.
             default:

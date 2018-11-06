@@ -74,7 +74,7 @@ public class ThrowAR : MonoBehaviour
     */
 	public void OnMouseUp()
 	{
-		Debug.Log("TouchUp");
+		Debug.Log("ITS USING THE RIGHT SCRIPT TO THROW");
 		endTime = clock.getFrameNumber();
 		endPos = Input.mousePosition;
 		throwBall();
@@ -91,17 +91,16 @@ public class ThrowAR : MonoBehaviour
 
 
 		//Calculating the force along each axis by comparing starting and ending values of time and finger position
-		XaxisForce = endPos.x - startPos.x;
-		YaxisForce = endPos.y - startPos.y;
-		ZaxisForce = (endTime - startTime) * ((float)distance / 15);
+		XaxisForce = ((endPos.x - startPos.x) / (endTime - startTime)) * 10;
+        YaxisForce = ((endPos.y - startPos.y) / (endTime - startTime)) * 10;
+        ZaxisForce = ((((float)distance * 50) / (endTime - startTime)) * 10) / 50;
 
-		Debug.Log("Force: " + ZaxisForce);
+        Debug.Log("Force: " + ZaxisForce);
 
-
-
+        
 		//The final arc calculation that governs the throw of the trash object.
-		calculatedForce = new Vector3(XaxisForce / 10, YaxisForce / 15, (ZaxisForce / 300) * 50f)*2;
-		Debug.Log ("CALCULATED FORCE: " + calculatedForce);
+		calculatedForce = new Vector3(XaxisForce / 2, YaxisForce / 5, (ZaxisForce / 75) * 50f) / 10;
+        Debug.Log ("CALCULATED FORCE: " + calculatedForce);
 
 		//Applies gravity and the calculated arc to the trash object
 		trash.useGravity = true;

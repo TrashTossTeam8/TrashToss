@@ -22,6 +22,28 @@ public class ARSpawnScript : MonoBehaviour
     // through drag and drop
     public GameObject rTrash;
 
+    public GameObject waterBottle;
+    public GameObject cheeseBurger;
+    public GameObject pizzaBox;
+    public GameObject chipBag;
+    public GameObject book;
+    public GameObject toiletPaper;
+    public GameObject donut;
+    public GameObject hat;
+    public GameObject pencil;
+    public GameObject paper;
+    public GameObject glassBottle;
+    public GameObject sodaCan;
+    public GameObject waterMelon;
+    public GameObject tree;
+    public GameObject pineApple;
+    public GameObject tomato;
+    public GameObject rubberDuck;
+    public GameObject pen;
+    public GameObject coffeeLid;
+    public GameObject plasticBox;
+    public GameObject pillBottle;
+
     // This is a gameObject place holder for the Compost trash type.
     // the trash object is directly referenced in the Unity engine 
     // through drag and drop
@@ -131,12 +153,12 @@ public class ARSpawnScript : MonoBehaviour
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
         // type
-        randomizer = (int)Random.Range(1f, 4f);
+        randomizer = (int)Random.Range(3, 4f);
 
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
         // the right type of trash
-        Debug.Log(randomizer);
+        Debug.Log("NUMBER GENERATED: " + randomizer);
 
 
         // A switch statement that takes in our ramdom variable and uses that
@@ -149,23 +171,75 @@ public class ARSpawnScript : MonoBehaviour
         switch (randomizer)
         {
             case 1:
-                Debug.Log("IT SURE DOES GO HERE1");
+                Debug.Log("CASE 1");
                 spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
-                //spawnedObject = Instantiate(rTrash,new Vector3(0f,-35f,200.4f), transform.rotation);
-                //         rTrash.transform.parent = logo.transform;
+                spawnedObject.tag = "Recycle T";
                 break;
             case 2:
-
-                Debug.Log("IT SURE DOES GO HERE2");
+                Debug.Log("CASE 2");
                 spawnedObject = Instantiate(cTrash, Vector3.zero, transform.rotation);
-                //spawnedObject = Instantiate(cTrash, new Vector3(0f, -35f, 200.4f), transform.rotation);
-                //cTrash.transform.parent = logo.transform;
+                spawnedObject.tag = "Recycle T";
                 break;
             case 3:
-
-                Debug.Log("IT SURE DOES GO HERE3");
-                spawnedObject = Instantiate(lTrash, Vector3.zero, transform.rotation);
+                Debug.Log("CASE 3");
+                spawnedObject = Instantiate(rTrash, Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Recycle T";
                 break;
+            case 4:
+                spawnedObject = Instantiate(cheeseBurger, Vector3.zero, transform.rotation);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 5:
+                spawnedObject = Instantiate(donut, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 6:
+                spawnedObject = Instantiate(pizzaBox, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 7:
+                spawnedObject = Instantiate(tomato, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 8:
+                spawnedObject = Instantiate(book, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Recycle T";
+                break;
+            case 9:
+                spawnedObject = Instantiate(glassBottle, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 3f);
+                spawnedObject.tag = "Recycle T";
+                break;
+            case 10:
+                spawnedObject = Instantiate(waterMelon, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Compost T";
+                break;
+            case 11:
+                spawnedObject = Instantiate(chipBag, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Land Fill T";
+                break;
+            case 12:
+                spawnedObject = Instantiate(coffeeLid, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Land Fill T";
+                break;
+            case 13:
+                spawnedObject = Instantiate(plasticBox, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Recycle T";
+                break;
+            case 14:
+                spawnedObject = Instantiate(pillBottle, Vector3.zero, transform.rotation);
+                spawnedObject.transform.position.Set(0f, 0f, 1f);
+                spawnedObject.tag = "Land Fill T";
+                break;
+
             // Default is used incase thier is an unforseen error computing the random
             // variable.
             default:
@@ -173,14 +247,18 @@ public class ARSpawnScript : MonoBehaviour
                 break;
 
         }
+        //spawnedObject.transform.position = Vector3.zero;
         spawnedObject.transform.SetParent(this.transform);
-        spawnedObject.transform.localPosition = Vector3.zero;
+        spawnedObject.transform.localPosition = new Vector3(0,0,1);
         spawnedObject.transform.localScale = Vector3.one;
+
+        
 
         // Turn off Physics of the Object.
         Rigidbody spawnedObjectRigidbody = spawnedObject.GetComponent<Rigidbody>();
         spawnedObjectRigidbody.isKinematic = true; // Freeze Object Physics
 
+        currentObject = spawnedObject;
 
         //ToDo: Throw Object after input.
 
@@ -197,27 +275,51 @@ public class ARSpawnScript : MonoBehaviour
             return;
         }
 
+        Vector3 delta = Camera.main.transform.position;
+        Debug.Log("CAMERA POSITION: " + Camera.main.transform.position.z);
+
         float xDelta = (endPos.x - startPos.x) / Screen.width;
         float yDelta = (endPos.y - startPos.y) / Screen.height;
 
         //Distance Formula that measures the length of the user's finger swipe
-        float distance = (Mathf.Sqrt(Mathf.Pow(xDelta, 2) + Mathf.Pow(yDelta, 2)));
+        //float distance = (Mathf.Sqrt(Mathf.Pow(xDelta, 2) + Mathf.Pow(yDelta, 2)));
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        float XaxisForce = xDelta * xMult;
-        float YaxisForce = yDelta * yMult;
-        float ZaxisForce = ((endTime - startTime) / (distance)) * zMult;
+        float XaxisForce = (xDelta * xMult) * 1.5f;
+        //float YaxisForce = (yDelta * yMult) * 1.5f;
+        //float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
+        float YaxisForce = 8.0f;
 
-        Debug.Log("(" + startTime + ", " + startTime + ")");
-        Debug.Log("Z Force: " + ZaxisForce);
+        float zCoordinate = Camera.main.transform.position.z;
+        float imageTargetZLocation = 10;
+
+        float distance = imageTargetZLocation - zCoordinate;
+
+        if(distance < 0)
+        {
+            distance = -distance;
+        }
+        
+
+        //float ZaxisForce = 1.25f * distance;
+
+        float ZaxisForce = 0.40f * distance;
+
+        if(distance > 15)
+        {
+            ZaxisForce = 0.45f * distance;
+        }
+
+        Debug.Log("FORCE: " + distance);
+        
 
 
 
         //The final arc calculation that governs the throw of the trash object.
         //var calculatedForce = new Vector3(XaxisForce / 10, YaxisForce / 15, (ZaxisForce / 300) * 50f) * 2;
         var calculatedForce = new Vector3(XaxisForce, YaxisForce , ZaxisForce);
-        Debug.Log("CALCULATED FORCE: " + calculatedForce);
+        //Debug.Log("CALCULATED FORCE: " + calculatedForce);
 
         Rigidbody spawnObjRB = currentObject.GetComponent<Rigidbody>();
 
@@ -228,6 +330,7 @@ public class ARSpawnScript : MonoBehaviour
         spawnObjRB.velocity = calculatedForce;
 
         currentObject.transform.SetParent(vuforiaTargetObject.transform);
+
 
         currentObject = null;
 
@@ -246,4 +349,3 @@ public class ARSpawnScript : MonoBehaviour
     }
 
 }
-//new Vector3(0f,-35f,200.4f)

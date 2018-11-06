@@ -1043,7 +1043,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Offline Mode
+  m_Text: Play (Non-AR)
 --- !u!222 &1497423852
 CanvasRenderer:
   m_ObjectHideFlags: 0

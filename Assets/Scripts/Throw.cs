@@ -64,7 +64,7 @@ public class Throw : MonoBehaviour
 
             if (trash.transform.position.y >= 5)
             {
-                trash.transform.Rotate(5f, 0, 0);
+                trash.transform.Rotate(5f, YaxisForce/100, ZaxisForce/100);
             }
         }
 

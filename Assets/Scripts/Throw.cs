@@ -30,7 +30,6 @@ public class Throw : MonoBehaviour
     public Vector2 endPos;
 
     public SpawnScript spawn;
-    
     public Timer clock;
 
 
@@ -55,11 +54,10 @@ public class Throw : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("isTrowing " + isThrowing);
 
         if (isThrowing == true)
         {
-
+            //Causes the trash to spin mid flight
             if (trash.transform.position.y >= 5)
             {
                 trash.transform.Rotate(5f, 0, 0);
@@ -128,6 +126,7 @@ public class Throw : MonoBehaviour
         StartCoroutine(waitASecond());
     }
 
+    //Controls the spin of the throw
     public void spin()
     {
         while(isThrowing)

@@ -171,7 +171,7 @@ public class ARSpawnScript : MonoBehaviour
             default:
             case 0:
                 // Spawn Recycling randomly from recycleObjects array
-                spawnedObject = Instantiate(recyclableObjects[Random.Range(0, recyclableObjects.Length - 1)], Vector3.zero, transform.rotation);
+                spawnedObject = Instantiate(recyclableObjects[Random.Range(0, recyclableObjects.Length - 1)], new Vector3(0,0,1), transform.rotation);
                 //Marks the object as a recyclable
                 spawnedObject.tag = "Recycle T";
                 break;

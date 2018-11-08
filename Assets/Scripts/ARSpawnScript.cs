@@ -73,8 +73,14 @@ public class ARSpawnScript : MonoBehaviour
     //The timer that controls whether there's still time left in the game
     public Timer clock;
 
+    public GameObject spawnedObject;
+
+    
+
     //Determines whether or not the user is currently touching the object
     private bool isHoldingToThrow = false;
+
+    public bool isThrowing = false;
 
     /*
     This method is called when the game starts and is used to spawn a piece of
@@ -90,6 +96,18 @@ public class ARSpawnScript : MonoBehaviour
 
         //Spawn the waste object
         currentObject = SpawnTrash();
+    }
+
+    public void Update()
+    {
+
+        if (currentObject != null && isThrowing)
+        {
+            currentObject.transform.Rotate(5f, 100, 100);
+            
+        }
+
+
     }
 
     /*
@@ -218,7 +236,7 @@ public class ARSpawnScript : MonoBehaviour
     */
     void throwBall()
     {
-
+        isThrowing = true;
         //Makes sure object is held
         if (currentObject == null)
         {
@@ -285,6 +303,8 @@ public class ARSpawnScript : MonoBehaviour
     IEnumerator CoWaitToSpawnTrash(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+
+        isThrowing = false;
 
         currentObject = SpawnTrash();
     }

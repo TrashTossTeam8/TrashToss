@@ -91,8 +91,24 @@ public class ARSpawnScript : MonoBehaviour
 
 
     public Timer clock;
+    public GameObject spawnedObject;
+
+    public float XaxisForce;
+    public float YaxisForce;
+    public float ZaxisForce;
 
     private bool isHoldingToThrow = false;
+    public bool isThrowing = false;
+
+    void Update()
+    {
+        // We detect if the trash object is thrown to not start the rotation too early
+        if (isThrowing == true && spawnedObject != null)
+        {
+            // We do the rotation based on the value of Y and Z axes
+            spawnedObject.transform.Rotate(5f, YaxisForce , ZaxisForce);
+        }
+    }
 
     /*
     This method is called when the game starts and is used to spawn a piece of
@@ -161,7 +177,7 @@ public class ARSpawnScript : MonoBehaviour
         // type
         int randomizer = Random.Range(0, 3);
 
-
+        isThrowing = false;
 
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
@@ -175,7 +191,7 @@ public class ARSpawnScript : MonoBehaviour
         // and is able to take in a vector which acts as coordinates and spawns the 
         // object at that location. A rotation type is also passed in due to neccesity,
         // Unity needs that information to call instantiate at a specific location.
-        GameObject spawnedObject;
+        
         if(debugUseTester && testTrash != null)
         {
             randomizer = -1;
@@ -233,6 +249,8 @@ public class ARSpawnScript : MonoBehaviour
             return;
         }
 
+        isThrowing = true;
+
         Vector3 delta = Camera.main.transform.position;
         Debug.Log("CAMERA POSITION: " + Camera.main.transform.position.z);
 
@@ -245,8 +263,8 @@ public class ARSpawnScript : MonoBehaviour
 
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        float XaxisForce = (xDelta * xMult);
-        float YaxisForce = (yDelta * yMult);
+        XaxisForce = (xDelta * xMult);
+        YaxisForce = (yDelta * yMult);
         //float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
 
         //float YaxisForce = yForce;
@@ -268,7 +286,7 @@ public class ARSpawnScript : MonoBehaviour
         //float ZaxisForce = 1.25f * distance;
 
         //float ZaxisForce = zMult * distance;
-        float ZaxisForce = zMult * YaxisForce;
+        ZaxisForce = zMult * YaxisForce;
 
         Debug.Log("FORCE: " + distance);
         

@@ -56,7 +56,6 @@ trash for the player to sort at the begining of the game.
     void Spawner()
 	{
 		randomizer = (int)Random.Range (1f, 2f);
-        
 
 		// A switch statement that takes in our ramdom variable and uses that
 		// to determine which type of trash to spawn (1 is recycle, 2 is compost,

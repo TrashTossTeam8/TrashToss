@@ -30,7 +30,6 @@ public class Throw : MonoBehaviour
     public Vector2 endPos;
 
     public SpawnScript spawn;
-    
     public Timer clock;
 
 
@@ -66,7 +65,7 @@ public class Throw : MonoBehaviour
             }
         }
     }
-    
+
     /*
     This method is called when the user clicks down on their mouse on the object
     that this script is attatched to. All it does is keep track of the position of the user's finger
@@ -126,7 +125,12 @@ public class Throw : MonoBehaviour
         StartCoroutine(waitASecond());
     }
 
+<<<<<<< HEAD
     /*public void spin()
+=======
+    //Controls the spin of the throw
+    public void spin()
+>>>>>>> bfe13bfcb551604e3a2ca8ad29bdc06640981aa5
     {
         while(isThrowing)
         {

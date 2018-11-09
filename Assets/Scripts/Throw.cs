@@ -54,18 +54,19 @@ public class Throw : MonoBehaviour
 
     void Update()
     {
-        // We detect if the trash object is thrown to not start the rotation too early
+
         if (isThrowing == true)
         {
-            // We check if the trash object hasn't reach a low position to stop the rotation when it is on the ground
+            //Causes the trash to spin mid flight
             if (trash.transform.position.y >= 5)
             {
-                // We take into account a rotation on the 3 axis to add a more realistic effect
-                trash.transform.Rotate(5f, YaxisForce/100, ZaxisForce/100);
+                trash.transform.Rotate(5f, 0, 0);
             }
         }
-    }
 
+
+    }
+    
     /*
     This method is called when the user clicks down on their mouse on the object
     that this script is attatched to. All it does is keep track of the position of the user's finger
@@ -125,12 +126,8 @@ public class Throw : MonoBehaviour
         StartCoroutine(waitASecond());
     }
 
-<<<<<<< HEAD
-    /*public void spin()
-=======
     //Controls the spin of the throw
     public void spin()
->>>>>>> bfe13bfcb551604e3a2ca8ad29bdc06640981aa5
     {
         while(isThrowing)
         {
@@ -141,7 +138,7 @@ public class Throw : MonoBehaviour
                 break;
             }
         }
-    }*/
+    }
 
     //Function that pauses for a second before spawning a new ball
     IEnumerator waitASecond()

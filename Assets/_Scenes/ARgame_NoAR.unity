@@ -1205,7 +1205,7 @@ MonoBehaviour:
   - {fileID: 1275576143656730, guid: f8a82d8d11233e947a79e2a932ab8570, type: 2}
   - {fileID: 1405335319438570, guid: 984dada597df5c442b8bb03a3f865966, type: 2}
   debugUseTester: 1
-  testTrash: {fileID: 1653721270464146, guid: 931dfc52fd271a846b05a6bf70694fca, type: 2}
+  testTrash: {fileID: 1405335319438570, guid: 984dada597df5c442b8bb03a3f865966, type: 2}
   xMult: 1.6
   yMult: 3
   zMult: 1.6

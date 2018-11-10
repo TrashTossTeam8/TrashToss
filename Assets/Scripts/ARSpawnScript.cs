@@ -73,8 +73,15 @@ public class ARSpawnScript : MonoBehaviour
     //The timer that controls whether there's still time left in the game
     public Timer clock;
 
+    public GameObject spawnedObject;
+
+    public float XaxisForce;
+    public float YaxisForce;
+    public float ZaxisForce;
+
     //Determines whether or not the user is currently touching the object
     private bool isHoldingToThrow = false;
+    public bool isThrowing = false;
 
     /*
     This method is called when the game starts and is used to spawn a piece of
@@ -90,6 +97,18 @@ public class ARSpawnScript : MonoBehaviour
 
         //Spawn the waste object
         currentObject = SpawnTrash();
+        
+    }
+
+    void Update()
+    {
+        
+        // We detect if the trash object is thrown to not start the rotation too early
+        if (isThrowing == true && spawnedObject!= null)
+        {
+            // We do the rotation based on the value of Y and Z axes
+            spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
+        }
     }
 
     /*
@@ -145,6 +164,8 @@ public class ARSpawnScript : MonoBehaviour
         // type
         int randomizer = Random.Range(0, 3);
 
+        isThrowing = false;
+
 
 
         // Write to concel the random variable value in order
@@ -159,7 +180,7 @@ public class ARSpawnScript : MonoBehaviour
         // and is able to take in a vector which acts as coordinates and spawns the 
         // object at that location. A rotation type is also passed in due to neccesity,
         // Unity needs that information to call instantiate at a specific location.
-        GameObject spawnedObject;
+        //GameObject spawnedObject;
 
         //Tests to see if test mode is on
         if(debugUseTester && testTrash != null)
@@ -224,6 +245,8 @@ public class ARSpawnScript : MonoBehaviour
         {
             return;
         }
+
+        isThrowing = true;
 
         //Gets the position of the camera
         Vector3 delta = Camera.main.transform.position;

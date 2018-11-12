@@ -72,6 +72,7 @@ public class ARSpawnScript : MonoBehaviour
 
     //The timer that controls whether there's still time left in the game
     public Timer clock;
+
     public GameObject spawnedObject;
 
     public float XaxisForce;
@@ -81,17 +82,6 @@ public class ARSpawnScript : MonoBehaviour
     //Determines whether or not the user is currently touching the object
     private bool isHoldingToThrow = false;
     public bool isThrowing = false;
-
-    void Update()
-    {
-        spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
-        // We detect if the trash object is thrown to not start the rotation too early
-        if (isThrowing == true && spawnedObject != null)
-        {
-            // We do the rotation based on the value of Y and Z axes
-            spawnedObject.transform.Rotate(5f, YaxisForce , ZaxisForce);
-        }
-    }
 
     /*
     This method is called when the game starts and is used to spawn a piece of
@@ -107,6 +97,18 @@ public class ARSpawnScript : MonoBehaviour
 
         //Spawn the waste object
         currentObject = SpawnTrash();
+
+    }
+
+    void Update()
+    {
+
+        // We detect if the trash object is thrown to not start the rotation too early
+        if (isThrowing == true && spawnedObject!= null)
+        {
+            // We do the rotation based on the value of Y and Z axes
+            spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
+        }
     }
 
     /*
@@ -164,6 +166,8 @@ public class ARSpawnScript : MonoBehaviour
 
         isThrowing = false;
 
+
+
         // Write to concel the random variable value in order
         // to tell if our code is working correclty and spawning
         // the right type of trash
@@ -176,7 +180,7 @@ public class ARSpawnScript : MonoBehaviour
         // and is able to take in a vector which acts as coordinates and spawns the
         // object at that location. A rotation type is also passed in due to neccesity,
         // Unity needs that information to call instantiate at a specific location.
-        GameObject spawnedObject;
+        //GameObject spawnedObject;
 
         //Tests to see if test mode is on
         if(debugUseTester && testTrash != null)
@@ -244,6 +248,7 @@ public class ARSpawnScript : MonoBehaviour
 
         isThrowing = true;
 
+        //Gets the position of the camera
         Vector3 delta = Camera.main.transform.position;
         Debug.Log("CAMERA POSITION: " + Camera.main.transform.position.z);
 
@@ -252,15 +257,8 @@ public class ARSpawnScript : MonoBehaviour
         float yDelta = (endPos.y - startPos.y) / Screen.height;
 
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        XaxisForce = (xDelta * xMult);
-        YaxisForce = (yDelta * yMult);
-        //float ZaxisForce = (((endTime - startTime) / (distance)) * zMult)*1.5f;
-
-        //float YaxisForce = yForce;
-
-        //float zCoordinate = Camera.main.transform.position.z;
-        //float imageTargetZLocation = 10;
-
+        float XaxisForce = (xDelta * xMult);
+        float YaxisForce = (yDelta * yMult);
 
         //Gets the position of the camera
         Vector3 cameraPos = Camera.main.transform.position;
@@ -271,10 +269,8 @@ public class ARSpawnScript : MonoBehaviour
         //Calculates the distance between the user and the image target
         float distance = Vector3.Distance(projectedCamPos, Vector3.zero);
 
-        //float ZaxisForce = zMult * distance;
-        ZaxisForce = zMult * YaxisForce;
-
-        Debug.Log("FORCE: " + distance);
+        //Calculates the power of the throw
+        float ZaxisForce = zMult * YaxisForce;
 
 
         //The final arc calculation that governs the throw of the trash object.

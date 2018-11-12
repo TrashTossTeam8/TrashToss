@@ -84,6 +84,7 @@ public class ARSpawnScript : MonoBehaviour
 
     void Update()
     {
+        spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
         // We detect if the trash object is thrown to not start the rotation too early
         if (isThrowing == true && spawnedObject != null)
         {

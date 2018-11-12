@@ -125,24 +125,6 @@ public class Throw : MonoBehaviour
         StartCoroutine(waitASecond());
     }
 
-<<<<<<< HEAD
-    /*public void spin()
-=======
-    //Controls the spin of the throw
-    public void spin()
->>>>>>> bfe13bfcb551604e3a2ca8ad29bdc06640981aa5
-    {
-        while(isThrowing)
-        {
-            trash.transform.Rotate(25f, 0, 0);
-            if(trash.transform.position.y <= 5)
-            {
-                isThrowing = false;
-                break;
-            }
-        }
-    }*/
-
     //Function that pauses for a second before spawning a new ball
     IEnumerator waitASecond()
     {

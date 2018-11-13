@@ -66,7 +66,7 @@ public class Throw : MonoBehaviour
 
 
     }
-
+    
     /*
     This method is called when the user clicks down on their mouse on the object
     that this script is attatched to. All it does is keep track of the position of the user's finger

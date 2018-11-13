@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
@@ -7,15 +7,15 @@ using Vuforia;
 
 /*
 This class is used to spawn a random trash object in the game so
-that the player can attempt to sort it. This method randomizes the
+that the player can attempt to sort it. This method randomizes the 
 type of trash spawned. This way the player does not always start
-the game sorting trash that is recyclable.
+the game sorting trash that is recyclable. 
 */
 
 public class ARSpawnScript : MonoBehaviour
 {
 
-    //This is the object that represents the image target that all game assets are relative to. The
+    //This is the object that represents the image target that all game assets are relative to. The 
     //three waste bins appear under this object when the game is played.
     public GameObject vuforiaTargetObject;
 
@@ -23,7 +23,7 @@ public class ARSpawnScript : MonoBehaviour
     public float spawnWaitTime = 2f;
 
     // This is a gameObject place holder for the recycable trash type.
-    // the trash object is directly referenced in the Unity engine
+    // the trash object is directly referenced in the Unity engine 
     // through drag and drop
 
 
@@ -36,10 +36,10 @@ public class ARSpawnScript : MonoBehaviour
 
     //This boolean puts the game into a test mode which allows gives the developer unlimited time and a chosen object
     public bool debugUseTester;
-    //This represents a waste object that is being tested on. This same object will be spawned repeatedly
+    //This represents a waste object that is being tested on. This same object will be spawned repeatedly 
     //if the bool 'debugUserTester' is True.
     public GameObject testTrash;
-
+    
     //These are the default values for the forces applied to the thrown objects.
     //xMult controls the X value sensitivity controlling left and right movement
     //YMult controls the Y value sensitivity controlling the height of the throw
@@ -69,7 +69,7 @@ public class ARSpawnScript : MonoBehaviour
     /// Holds the screen coordinates of the user's finger once they left their finger from the trash object
     /// </summary>
     public Vector2 endPos;
-
+    
     //The timer that controls whether there's still time left in the game
     public Timer clock;
 
@@ -97,18 +97,15 @@ public class ARSpawnScript : MonoBehaviour
 
         //Spawn the waste object
         currentObject = SpawnTrash();
-        spawnedObject = currentObject;
-
-        Debug.Log("NAME: " + currentObject.name);
+        
     }
 
     void Update()
     {
-
+        
         // We detect if the trash object is thrown to not start the rotation too early
         if (isThrowing == true && spawnedObject!= null)
         {
-            Debug.Log("BLOCK CALLED");
             // We do the rotation based on the value of Y and Z axes
             spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
         }
@@ -129,7 +126,7 @@ public class ARSpawnScript : MonoBehaviour
             startTime = Time.realtimeSinceStartup;
             startPos = Input.mousePosition;
         }
-
+        
     }
 
     /*
@@ -160,7 +157,7 @@ public class ARSpawnScript : MonoBehaviour
     public GameObject SpawnTrash()
     {
 
-        // This int variable is used to insure that the type of trash
+        // This int variable is used to insure that the type of trash 
         // spawned is random.
         // Randomizing the int variable to a whole integer
         // between the values of 1 and 3 thus determining trash
@@ -180,7 +177,7 @@ public class ARSpawnScript : MonoBehaviour
         // A switch statement that takes in our ramdom variable and uses that
         // to determine which type of trash to spawn (0 is recycle, 1 is compost,
         // and 2 is land fill). The Instantiate function is called to spawn the trash
-        // and is able to take in a vector which acts as coordinates and spawns the
+        // and is able to take in a vector which acts as coordinates and spawns the 
         // object at that location. A rotation type is also passed in due to neccesity,
         // Unity needs that information to call instantiate at a specific location.
         //GameObject spawnedObject;
@@ -225,7 +222,7 @@ public class ARSpawnScript : MonoBehaviour
         //Sets the size of the object
         spawnedObject.transform.localScale = Vector3.one;
 
-
+        
 
         //Gets the rigidbody of the object. This is the part of the object that physics can be applied to.
         Rigidbody spawnedObjectRigidbody = spawnedObject.GetComponent<Rigidbody>();
@@ -233,7 +230,7 @@ public class ARSpawnScript : MonoBehaviour
         spawnedObjectRigidbody.isKinematic = true;
 
         currentObject = spawnedObject;
-
+        
         return spawnedObject;
     }
 
@@ -258,7 +255,7 @@ public class ARSpawnScript : MonoBehaviour
         // Screen Drag deltas. This calculates the length of the user's swipe on the screen.
         float xDelta = (endPos.x - startPos.x) / Screen.width;
         float yDelta = (endPos.y - startPos.y) / Screen.height;
-
+        
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
         float XaxisForce = (xDelta * xMult);
         float YaxisForce = (yDelta * yMult);
@@ -274,8 +271,8 @@ public class ARSpawnScript : MonoBehaviour
 
         //Calculates the power of the throw
         float ZaxisForce = zMult * YaxisForce;
-
-
+        
+        
         //The final arc calculation that governs the throw of the trash object.
         var calculatedForce = new Vector3(XaxisForce, YaxisForce , ZaxisForce);
 

@@ -10,9 +10,10 @@ public class TipScript : MonoBehaviour
     //Text variable that holds the tip
     public Text tip;
 
-    //public LandFillScore land;
-    //public RecycleScore recycle;
-    //public CompostScore compost;
+    public LandFillScore land;
+    public RecycleScore recycle;
+    public CompostScore compost;
+    public ARSpawnScript currentObject;
 
     //Text that is currently displayed
     String currentTip;
@@ -51,21 +52,20 @@ public class TipScript : MonoBehaviour
 
     public void GetTipL()
     {
-        tip.text = "Tip:" +  "Wrong, but nice try. This object belong to Landfill trash can";
+
+        tip.text = "Tip: Wrong, but nice try. This object belong to Landfill trash can";
         //currentTip = tip.text;
     }
 
     public void GetTipR()
     {
-        tip.text = "Tip:" + "Wrong, but nice try. This object belong to Recyle trash can";
+        tip.text = "Tip: Wrong, but nice try. This object belong to Recyle trash can";
         //currentTip = tip.text;
     }
 
     public void GetTipC()
     {
-        tip.text = "Tip:"  + "Wrong, but nice try. This object belong to Compost trash can";
+        tip.text = "Tip: Wrong, but nice try. This object belong to Compost trash can";
         //currentTip = tip.text;
     }
-
-
 }

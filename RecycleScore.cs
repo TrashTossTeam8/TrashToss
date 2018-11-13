@@ -32,10 +32,12 @@ public class RecycleScore : MonoBehaviour {
         }
         if (go.tag == tagL)
         {
+            //get and display the tip for soring the trash wrong to the LandFill Trash
             tScript.GetTipL();
         }
         if (go.tag == tagC)
         {
+            //get and display the tip for soring the trash wrong to the Compost Trash
             tScript.GetTipC();
         }
 

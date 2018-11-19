@@ -25,8 +25,7 @@ public class ARSpawnScript : MonoBehaviour
     // This is a gameObject place holder for the recycable trash type.
     // the trash object is directly referenced in the Unity engine 
     // through drag and drop
-
-
+    
     //In this project, there are three types of waste: recyclables, compost, and landfill items.
     //These arrays hold the objects of each type.
     [Header("TrashObjects")]
@@ -97,13 +96,17 @@ public class ARSpawnScript : MonoBehaviour
 
         //Spawn the waste object
         currentObject = SpawnTrash();
-        
+        spawnedObject = currentObject;
+
+        Debug.Log("NAME: " + currentObject.name);
+
     }
 
     void Update()
     {
-        
+        Debug.Log("BLOCK CALLED");
         // We detect if the trash object is thrown to not start the rotation too early
+        spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
         if (isThrowing == true && spawnedObject!= null)
         {
             // We do the rotation based on the value of Y and Z axes

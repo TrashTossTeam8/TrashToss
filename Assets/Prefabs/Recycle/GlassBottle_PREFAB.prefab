@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4919061005956154}
   - component: {fileID: 54060361142969020}
   - component: {fileID: 114106264116302626}
-  - component: {fileID: 114600335841680618}
+  - component: {fileID: 114563751076787252}
   m_Layer: 0
   m_Name: GlassBottle_PREFAB
   m_TagString: Recycle T
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cdb0980d4f8b8e459a540ae234bdc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114600335841680618
+--- !u!114 &114563751076787252
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1713078895743866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cdb0980d4f8b8e459a540ae234bdc91, type: 3}
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114882221928038006

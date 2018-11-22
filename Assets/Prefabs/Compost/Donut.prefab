@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 23975503265041302}
   - component: {fileID: 54232072841998620}
   - component: {fileID: 135117439527939654}
-  - component: {fileID: 114466295398253934}
   - component: {fileID: 114851245778996400}
+  - component: {fileID: 114785605804282878}
   m_Layer: 0
   m_Name: Donut
   m_TagString: Compost T
@@ -102,7 +102,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &114466295398253934
+--- !u!114 &114785605804282878
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1653721270464146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228b1f13b151cf34e85ce9df51e7f4e9, type: 3}
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114851245778996400

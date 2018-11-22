@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4155888297083862}
   - component: {fileID: 54265914319260312}
-  - component: {fileID: 114249511739869808}
   - component: {fileID: 114129525129623610}
+  - component: {fileID: 114355998275358142}
   m_Layer: 0
   m_Name: Croissant_PREFAB
   m_TagString: Compost T
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114249511739869808
+--- !u!114 &114355998275358142
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094608262684684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228b1f13b151cf34e85ce9df51e7f4e9, type: 3}
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135701358065808022

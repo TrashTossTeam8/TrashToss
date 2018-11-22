@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4478175402094432}
   - component: {fileID: 54652656815757412}
   - component: {fileID: 114874612657374990}
-  - component: {fileID: 114161379531296152}
+  - component: {fileID: 114939450436157948}
   m_Layer: 0
   m_Name: Chicken_PREFAB
   m_TagString: Compost T
@@ -131,17 +131,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114161379531296152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1282129328342576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228b1f13b151cf34e85ce9df51e7f4e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114874612657374990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,6 +140,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114939450436157948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282129328342576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135942720174654330

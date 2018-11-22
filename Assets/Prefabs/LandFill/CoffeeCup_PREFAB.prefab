@@ -70,8 +70,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4693881750262950}
   - component: {fileID: 54632956848111290}
-  - component: {fileID: 114136615053859802}
   - component: {fileID: 114534598906095400}
+  - component: {fileID: 114819697416437616}
   m_Layer: 0
   m_Name: CoffeeCup_PREFAB
   m_TagString: Land Fill T
@@ -245,17 +245,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0950238, y: 0.12053434, z: 0.0950238}
   m_Center: {x: 0, y: 0.060267355, z: -0.000000003725291}
---- !u!114 &114136615053859802
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1930751152394860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2df1306936349842aa10113e9d639d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114534598906095400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,5 +254,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114819697416437616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1930751152394860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

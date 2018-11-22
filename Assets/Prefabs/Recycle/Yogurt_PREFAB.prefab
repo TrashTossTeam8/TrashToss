@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4516402445202342}
   - component: {fileID: 54489642269963104}
   - component: {fileID: 114469485169467080}
-  - component: {fileID: 114475953359968144}
+  - component: {fileID: 114979358977482438}
   m_Layer: 0
   m_Name: Yogurt_PREFAB
   m_TagString: Recycle T
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114475953359968144
+--- !u!114 &114979358977482438
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,6 +162,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1152225924532998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228b1f13b151cf34e85ce9df51e7f4e9, type: 3}
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

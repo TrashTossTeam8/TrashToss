@@ -70,8 +70,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4370268698182590}
   - component: {fileID: 54343309501942868}
-  - component: {fileID: 114081002349540426}
   - component: {fileID: 114447244823439246}
+  - component: {fileID: 114910057874987924}
   m_Layer: 0
   m_Name: Foil_PREFAB
   m_TagString: Land Fill T
@@ -233,17 +233,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114081002349540426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1862178959709290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cdb0980d4f8b8e459a540ae234bdc91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114447244823439246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,6 +242,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114910057874987924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1862178959709290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135429290513003658

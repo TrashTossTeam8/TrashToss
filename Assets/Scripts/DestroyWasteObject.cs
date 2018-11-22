@@ -9,9 +9,9 @@ stack up and clutter the scene. If the trash was allowed
 to clutter it might compromise performance.
 */
 
-public class DestroyC : MonoBehaviour {
+public class DestroyWasteObject : MonoBehaviour {
 
-/*
+    /*
 This method is called when the object that this script is 
 attatched to collides with any other game object that has 
 a collider. After a determined amount of time the object 
@@ -19,9 +19,8 @@ that this scirpt is attatched too (usually trash objects)
 is destroyed.
 */
 
-
-	void OnCollisionEnter(Collision floor)
-	{
-		Destroy (gameObject, 2f);
-	}
+    void OnCollisionEnter(Collision floor)
+    {
+        Destroy(gameObject, 2f);
+    }
 }

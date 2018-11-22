@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4926268836130072}
   - component: {fileID: 54978206732619644}
   - component: {fileID: 114921359413015738}
-  - component: {fileID: 114618025282804004}
+  - component: {fileID: 114529453217187288}
   m_Layer: 0
   m_Name: coca_can
   m_TagString: Recycle T
@@ -266,7 +266,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114618025282804004
+--- !u!114 &114529453217187288
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382768708116474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228b1f13b151cf34e85ce9df51e7f4e9, type: 3}
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114921359413015738

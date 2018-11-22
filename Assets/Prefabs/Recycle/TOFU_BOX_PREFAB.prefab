@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4869829729142766}
   - component: {fileID: 54288518010579892}
   - component: {fileID: 114495849296770964}
-  - component: {fileID: 114980820558483814}
+  - component: {fileID: 114301214680497190}
   m_Layer: 0
   m_Name: TOFU_BOX_PREFAB
   m_TagString: Untagged
@@ -143,6 +143,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15385523, y: 0.09527371, z: 0.16574901}
   m_Center: {x: -0.012574065, y: 0.047636863, z: 0.0010334777}
+--- !u!114 &114301214680497190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318843710263608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114495849296770964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -152,16 +163,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114980820558483814
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1318843710263608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cdb0980d4f8b8e459a540ae234bdc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

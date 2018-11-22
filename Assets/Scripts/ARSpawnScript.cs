@@ -25,7 +25,7 @@ public class ARSpawnScript : MonoBehaviour
     // This is a gameObject place holder for the recycable trash type.
     // the trash object is directly referenced in the Unity engine 
     // through drag and drop
-    
+
     //In this project, there are three types of waste: recyclables, compost, and landfill items.
     //These arrays hold the objects of each type.
     [Header("TrashObjects")]
@@ -38,7 +38,7 @@ public class ARSpawnScript : MonoBehaviour
     //This represents a waste object that is being tested on. This same object will be spawned repeatedly 
     //if the bool 'debugUserTester' is True.
     public GameObject testTrash;
-    
+
     //These are the default values for the forces applied to the thrown objects.
     //xMult controls the X value sensitivity controlling left and right movement
     //YMult controls the Y value sensitivity controlling the height of the throw
@@ -68,7 +68,7 @@ public class ARSpawnScript : MonoBehaviour
     /// Holds the screen coordinates of the user's finger once they left their finger from the trash object
     /// </summary>
     public Vector2 endPos;
-    
+
     //The timer that controls whether there's still time left in the game
     public Timer clock;
 
@@ -107,7 +107,7 @@ public class ARSpawnScript : MonoBehaviour
         Debug.Log("BLOCK CALLED");
         // We detect if the trash object is thrown to not start the rotation too early
         spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
-        if (isThrowing == true && spawnedObject!= null)
+        if (isThrowing == true && spawnedObject != null)
         {
             // We do the rotation based on the value of Y and Z axes
             spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
@@ -129,7 +129,7 @@ public class ARSpawnScript : MonoBehaviour
             startTime = Time.realtimeSinceStartup;
             startPos = Input.mousePosition;
         }
-        
+
     }
 
     /*
@@ -186,7 +186,7 @@ public class ARSpawnScript : MonoBehaviour
         //GameObject spawnedObject;
 
         //Tests to see if test mode is on
-        if(debugUseTester && testTrash != null)
+        if (debugUseTester && testTrash != null)
         {
             randomizer = -1;
         }
@@ -195,7 +195,7 @@ public class ARSpawnScript : MonoBehaviour
             default:
             case 0:
                 // Spawn Recycling randomly from recycleObjects array
-                spawnedObject = Instantiate(recyclableObjects[Random.Range(0, recyclableObjects.Length - 1)], new Vector3(0,0,1), transform.rotation);
+                spawnedObject = Instantiate(recyclableObjects[Random.Range(0, recyclableObjects.Length - 1)], new Vector3(0, 0, 1), transform.rotation);
                 //Marks the object as a recyclable
                 spawnedObject.tag = "Recycle T";
                 break;
@@ -221,11 +221,11 @@ public class ARSpawnScript : MonoBehaviour
         //the object is oriented correctly
         spawnedObject.transform.SetParent(this.transform);
         //Places the object in front of the camera
-        spawnedObject.transform.localPosition = new Vector3(0,0,1);
+        spawnedObject.transform.localPosition = new Vector3(0, 0, 1);
         //Sets the size of the object
         spawnedObject.transform.localScale = Vector3.one;
 
-        
+
 
         //Gets the rigidbody of the object. This is the part of the object that physics can be applied to.
         Rigidbody spawnedObjectRigidbody = spawnedObject.GetComponent<Rigidbody>();
@@ -233,7 +233,7 @@ public class ARSpawnScript : MonoBehaviour
         spawnedObjectRigidbody.isKinematic = true;
 
         currentObject = spawnedObject;
-        
+
         return spawnedObject;
     }
 
@@ -258,7 +258,7 @@ public class ARSpawnScript : MonoBehaviour
         // Screen Drag deltas. This calculates the length of the user's swipe on the screen.
         float xDelta = (endPos.x - startPos.x) / Screen.width;
         float yDelta = (endPos.y - startPos.y) / Screen.height;
-        
+
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
         float XaxisForce = (xDelta * xMult);
         float YaxisForce = (yDelta * yMult);
@@ -274,10 +274,10 @@ public class ARSpawnScript : MonoBehaviour
 
         //Calculates the power of the throw
         float ZaxisForce = zMult * YaxisForce;
-        
-        
+
+
         //The final arc calculation that governs the throw of the trash object.
-        var calculatedForce = new Vector3(XaxisForce, YaxisForce , ZaxisForce);
+        var calculatedForce = new Vector3(XaxisForce, YaxisForce, ZaxisForce);
 
         // Transforms the camera-relative force into world space.
         Vector3 worldSpaceForceDirection = Camera.main.transform.TransformDirection(calculatedForce);

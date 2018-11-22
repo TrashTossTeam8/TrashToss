@@ -1,0 +1,270 @@
+fileFormatVersion: 2
+guid: 178f69039dfe8cc47a38226210cc9a7b
+timeCreated: 1528288408
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Carpet01
+    100002: Carpet02
+    100004: Carpet03
+    100006: Carpets
+    100008: Door02
+    100010: FrameLarge02
+    100012: FrameLarge02 1
+    100014: FrameLarge02 2
+    100016: FrameSmall01
+    100018: FrameSmall01 1
+    100020: FrameSmall01 2
+    100022: Glass02
+    100024: Glass02 1
+    100026: Glass02 2
+    100028: GlassSmall02
+    100030: GlassSmall03
+    100032: GlassSmall04
+    100034: GlassStatic
+    100036: GlassStatic 1
+    100038: GlassStatic 2
+    100040: Handle
+    100042: Handle02
+    100044: Handle03
+    100046: Handle04
+    100048: Handle05
+    100050: Handle06
+    100052: Handle07
+    100054: //RootNode
+    100056: MainFrame
+    100058: MainFrame 1
+    100060: MainFrame 2
+    100062: OuterCube
+    100064: Overall
+    100066: Window01
+    100068: Window02
+    100070: Window03
+    400000: Carpet01
+    400002: Carpet02
+    400004: Carpet03
+    400006: Carpets
+    400008: Door02
+    400010: FrameLarge02
+    400012: FrameLarge02 1
+    400014: FrameLarge02 2
+    400016: FrameSmall01
+    400018: FrameSmall01 1
+    400020: FrameSmall01 2
+    400022: Glass02
+    400024: Glass02 1
+    400026: Glass02 2
+    400028: GlassSmall02
+    400030: GlassSmall03
+    400032: GlassSmall04
+    400034: GlassStatic
+    400036: GlassStatic 1
+    400038: GlassStatic 2
+    400040: Handle
+    400042: Handle02
+    400044: Handle03
+    400046: Handle04
+    400048: Handle05
+    400050: Handle06
+    400052: Handle07
+    400054: //RootNode
+    400056: MainFrame
+    400058: MainFrame 1
+    400060: MainFrame 2
+    400062: OuterCube
+    400064: Overall
+    400066: Window01
+    400068: Window02
+    400070: Window03
+    2100000: HouseMat01
+    2100002: OuterWallMat01
+    2100004: GlassMat01
+    2300000: Carpet01
+    2300002: Carpet02
+    2300004: Carpet03
+    2300006: Door02
+    2300008: FrameLarge02
+    2300010: FrameLarge02 1
+    2300012: FrameLarge02 2
+    2300014: FrameSmall01
+    2300016: FrameSmall01 1
+    2300018: FrameSmall01 2
+    2300020: Glass02
+    2300022: Glass02 1
+    2300024: Glass02 2
+    2300026: GlassSmall02
+    2300028: GlassSmall03
+    2300030: GlassSmall04
+    2300032: GlassStatic
+    2300034: GlassStatic 1
+    2300036: GlassStatic 2
+    2300038: Handle
+    2300040: Handle02
+    2300042: Handle03
+    2300044: Handle04
+    2300046: Handle05
+    2300048: Handle06
+    2300050: Handle07
+    2300052: MainFrame
+    2300054: MainFrame 1
+    2300056: MainFrame 2
+    2300058: OuterCube
+    2300060: Overall
+    3300000: Carpet01
+    3300002: Carpet02
+    3300004: Carpet03
+    3300006: Door02
+    3300008: FrameLarge02
+    3300010: FrameLarge02 1
+    3300012: FrameLarge02 2
+    3300014: FrameSmall01
+    3300016: FrameSmall01 1
+    3300018: FrameSmall01 2
+    3300020: Glass02
+    3300022: Glass02 1
+    3300024: Glass02 2
+    3300026: GlassSmall02
+    3300028: GlassSmall03
+    3300030: GlassSmall04
+    3300032: GlassStatic
+    3300034: GlassStatic 1
+    3300036: GlassStatic 2
+    3300038: Handle
+    3300040: Handle02
+    3300042: Handle03
+    3300044: Handle04
+    3300046: Handle05
+    3300048: Handle06
+    3300050: Handle07
+    3300052: MainFrame
+    3300054: MainFrame 1
+    3300056: MainFrame 2
+    3300058: OuterCube
+    3300060: Overall
+    4300000: Door02
+    4300002: Handle
+    4300004: OuterCube
+    4300006: Overall
+    4300008: MainFrame
+    4300010: GlassStatic
+    4300012: FrameLarge02
+    4300014: Glass02
+    4300016: Handle02
+    4300018: FrameSmall01
+    4300020: GlassSmall02
+    4300022: Handle03
+    4300024: MainFrame
+    4300026: GlassStatic
+    4300028: FrameLarge02
+    4300030: Handle04
+    4300032: Glass02
+    4300034: FrameSmall01
+    4300036: Handle05
+    4300038: GlassSmall03
+    4300040: MainFrame
+    4300042: GlassStatic
+    4300044: FrameLarge02
+    4300046: Handle06
+    4300048: Glass02
+    4300050: FrameSmall01
+    4300052: Handle07
+    4300054: GlassSmall04
+    4300056: Carpet03
+    4300058: Carpet02
+    4300060: Carpet01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GlassMat01
+    second: {fileID: 2100000, guid: 64ff87f9d5ee1e44da777def4e7a42a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HouseMat01
+    second: {fileID: 2100000, guid: 3b6b4f9aeaf4bfd4c9908bdd8dc118cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OuterWallMat01
+    second: {fileID: 2100000, guid: a801e9667a7b72948a11eb23273ac479, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

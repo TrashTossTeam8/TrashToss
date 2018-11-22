@@ -18,13 +18,30 @@ public class LandFillScore : MonoBehaviour {
     */
     public string tagToCompare = "Land Fill T";
 
+    //Sound effect that plays when the user scores a point
+    public AudioClip successClip;
+
+    //Called on load
+    private void Start()
+    {
+        //Prevents the clip from playing automatically on load
+        GetComponent<AudioSource>().playOnAwake = false;
+        //Assigns the clip to the AudioSource object attached to the waste bin
+        GetComponent<AudioSource>().clip = successClip;
+    }
+
+    //Called when a waste object enters the collider within a waste bin
     void OnTriggerEnter(Collider trashObject)
     {
         GameObject go = (trashObject.attachedRigidbody) ? trashObject.attachedRigidbody.gameObject : trashObject.gameObject;
 
+        //If the object has been sorted correctly
         if (go.tag == tagToCompare)
         {
+            //Increase the score
             GameScore.playerScore++;
+            //Play the success sound
+            GetComponent<AudioSource>().Play();
         }
 
     }

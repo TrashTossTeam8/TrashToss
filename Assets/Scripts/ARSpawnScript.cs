@@ -104,13 +104,13 @@ public class ARSpawnScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("BLOCK CALLED");
+        //Debug.Log("BLOCK CALLED");
         // We detect if the trash object is thrown to not start the rotation too early
-        spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
+        //spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
         if (isThrowing == true && spawnedObject != null)
         {
             // We do the rotation based on the value of Y and Z axes
-            spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
+            //spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
         }
     }
 

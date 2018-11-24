@@ -1262,8 +1262,8 @@ MonoBehaviour:
   - {fileID: 1275576143656730, guid: f8a82d8d11233e947a79e2a932ab8570, type: 2}
   - {fileID: 1517424687450454, guid: c919b5d3ec317634486463dff7055b9d, type: 2}
   - {fileID: 1249805010350280, guid: f5bfc94138d8e134f96736f6fd08de5c, type: 2}
-  debugUseTester: 0
-  testTrash: {fileID: 1686886408452238, guid: cf344a180126d664fbdad3cfed4c141d, type: 2}
+  debugUseTester: 1
+  testTrash: {fileID: 1713078895743866, guid: 29449a5215adb004e961bfb2aabc5976, type: 2}
   xMult: 1
   yMult: 3
   zMult: 1

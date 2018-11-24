@@ -19,6 +19,7 @@ This Method is used to return the user to the MainMenu
 */ 
 	public void OnMenuButtonPress()
 	{
+        Debug.Log("BUTTON REGISTERED");
         GameScore.playerScore = 0;
 		Application.LoadLevel("MainMenu");
 	}

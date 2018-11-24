@@ -198,11 +198,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4689788723845368}
   - component: {fileID: 54173895415182358}
-  - component: {fileID: 114716409738519786}
   - component: {fileID: 114015496897516958}
+  - component: {fileID: 114827403285495560}
   m_Layer: 0
   m_Name: Chip_Bag
-  m_TagString: Untagged
+  m_TagString: Land Fill T
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22924158f9b76e449ff5473fa4ac742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114716409738519786
+--- !u!114 &114827403285495560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,6 +738,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1628078675167962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2df1306936349842aa10113e9d639d3, type: 3}
+  m_Script: {fileID: 11500000, guid: b25e4f8168af21d4db084c7c923c4c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: bd79601a70ce95d419a48d5d0cccec0c
+timeCreated: 1527493347
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BoxesLarge
+    100002: BoxesSlim
+    100004: BoxLarge1
+    100006: BoxLarge2
+    100008: SlimBox1
+    100010: SlimBox2
+    100012: SlimBox3
+    100014: Table
+    100016: //RootNode
+    400000: BoxesLarge
+    400002: BoxesSlim
+    400004: BoxLarge1
+    400006: BoxLarge2
+    400008: SlimBox1
+    400010: SlimBox2
+    400012: SlimBox3
+    400014: Table
+    400016: //RootNode
+    2100000: T2_WoodMat01
+    2100002: T2_MetalMat01
+    2300000: BoxLarge1
+    2300002: BoxLarge2
+    2300004: SlimBox1
+    2300006: SlimBox2
+    2300008: SlimBox3
+    2300010: Table
+    3300000: BoxLarge1
+    3300002: BoxLarge2
+    3300004: SlimBox1
+    3300006: SlimBox2
+    3300008: SlimBox3
+    3300010: Table
+    4300000: Table
+    4300002: SlimBox1
+    4300004: SlimBox2
+    4300006: SlimBox3
+    4300008: BoxLarge1
+    4300010: BoxLarge2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T2_MetalMat01
+    second: {fileID: 2100000, guid: 3a80b7e51a7fac24982c8e99c0ff967a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T2_WoodMat01
+    second: {fileID: 2100000, guid: dd1ce9381c19934468d3dbb71534ac07, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

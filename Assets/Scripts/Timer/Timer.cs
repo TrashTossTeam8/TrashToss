@@ -6,16 +6,17 @@ using System;
 
 public class Timer : MonoBehaviour
 {
+    //Controls the amount of time on the timer and the time it starts at
     public float timerDuration = 60f;
     public float currentTime = 60f;
 
+    //Counts the frames as a way to tell time
     public int frameCount = 0;
-    //public Text countdownText;
 
-    //References the TipScript
-    //public TipScript tScript;
+    //Debug mode boolean that allows the developer to play the game with infinite time for testing
     public bool debugDontFinish;
 
+    //Calls OnTimerUpdate each time it changes
     public Action<float> OnTimerUpdate = delegate(float timer) { };
     public Action OnTimerComplete = delegate { };
 
@@ -31,7 +32,6 @@ public class Timer : MonoBehaviour
     void Update()
     {
         frameCount++;
-        //countdownText.text = ("Time Left = " + timerDuration);
     }
 
     //Gets the number of the frame used to count time
@@ -60,7 +60,6 @@ public class Timer : MonoBehaviour
             currentTime -= Time.deltaTime;
 
             OnTimerUpdate(currentTime);
-            //countdownText.text = String.Format("{00:00}", timerDuration);
 
             //Tell the TipScript to display a new tip every ten seconds
             if (timerDuration % 10 == 0)

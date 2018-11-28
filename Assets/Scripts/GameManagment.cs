@@ -14,10 +14,22 @@ game will find their functionality.
 public class GameManagment : MonoBehaviour {
 
     public static GameManagment instance;
-/*
-This Method is used to return the user to the MainMenu
-*/ 
-	public void OnMenuButtonPress()
+
+    bool isMute;
+
+    /*
+    This method is used for the mute buton 
+    */
+    public void Mute()
+    {
+        isMute = !isMute;
+        AudioListener.volume = isMute ? 0 : 1;
+    }
+
+    /*
+    This Method is used to return the user to the MainMenu
+    */
+    public void OnMenuButtonPress()
 	{
         Debug.Log("BUTTON REGISTERED");
         GameScore.playerScore = 0;

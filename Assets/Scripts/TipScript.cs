@@ -13,23 +13,21 @@ public class TipScript : MonoBehaviour {
     String currentTip;
 
     //Array that holds all possible tips
-    String[] tips = { "Remember! Plastic is recyclable and goes in the Recycle (blue) bin.", "Remember! Metal is recyclable and goes in the Recycle (blue) bin.", "Organic material goes in the compost bin.", "Chip bags cannot be recycled and go in the landfill waste (Unfortunately)", "If it's not organic, plastic, paper, or metal, it's probably landfill waste.", "Remember to dump out liquids before putting cups in bins."};
+    String[] tips = {"Remember! Plastic is recyclable and goes in the Recycle (blue) bin.", "Remember! Metal is recyclable and goes in the Recycle (blue) bin.", "Organic material goes in the compost bin.", "Chip bags cannot be recycled and go in the landfill waste (Unfortunately)", "If it's not organic, plastic, paper, or metal, it's probably landfill waste.", "Remember to dump out liquids before putting cups in bins."};
 
     // Use this for initialization
-    void Start ()
+    public void Start ()
     {
-
         //Default blank tip value
-        tip.text = "";
+        SetTip("");
         currentTip = "";
 	}
 	
-	public void GetTip()
+	public string GetTip()
     {
         //Generate an rng variable to randomly pick a tip
         System.Random r = new System.Random();
-
-
+        
         //While loop makes sure the same tip doesn't get selected twice.
         while(tip.text == currentTip)
         {
@@ -42,5 +40,13 @@ public class TipScript : MonoBehaviour {
 
         currentTip = tip.text;
 
+        return currentTip;
+
+    }
+
+    //Sets the tip to be equal to the passed value
+    public void SetTip(String input)
+    {
+        tip.text = input;
     }
 }

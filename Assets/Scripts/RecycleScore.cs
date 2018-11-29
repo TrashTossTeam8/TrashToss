@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 /*
 This class is used to trigger the correct sorting of a piece of trash.
@@ -20,6 +21,8 @@ public class RecycleScore : MonoBehaviour {
 
     //Sound effect that plays when the user scores a point
     public AudioClip successClip;
+
+    public Text tip;
 
     //Called on load
     private void Start()
@@ -42,6 +45,13 @@ public class RecycleScore : MonoBehaviour {
             GameScore.playerScore++;
             //Play the success sound
             GetComponent<AudioSource>().Play();
+            tip.text = "";
+            Destroy(go);
+        }
+        else
+        {
+            tip.text = "INCORRECT - That belonged in the " + go.tag.Substring(0, go.tag.Length - 2) + " bin.";
+            Destroy(go);
         }
 
     }

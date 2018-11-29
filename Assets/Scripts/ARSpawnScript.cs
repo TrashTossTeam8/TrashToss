@@ -108,7 +108,7 @@ public class ARSpawnScript : MonoBehaviour
         // We detect if the trash object is thrown to not start the rotation too early
         if (isThrowing == true && spawnedObject != null)
         {
-            Debug.Log("BLOCK CALLED");
+            //Debug.Log("BLOCK CALLED");
             // We do the rotation based on the value of Y and Z axes
             spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
         }
@@ -311,7 +311,6 @@ public class ARSpawnScript : MonoBehaviour
     IEnumerator CoWaitToSpawnTrash(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-
         currentObject = SpawnTrash();
     }
 

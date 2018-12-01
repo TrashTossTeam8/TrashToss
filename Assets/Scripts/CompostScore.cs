@@ -50,7 +50,14 @@ public class CompostScore : MonoBehaviour {
         }
         else
         {
-            tip.text = "INCORRECT - That belonged in the " + go.tag.Substring(0, go.tag.Length - 2) + " bin.";
+            if (go.tag.Contains("Compost"))
+            {
+                tip.text = "Food waste can go into the COMPOST bin in the Residential Dining Halls, University Student Union, and a limited number of other locations on campus. Ask in other areas on campus.";
+            }
+            else
+            {
+                tip.text = "Only food can potentially go in the compost bin at CSULB. No food containers can go in the compost bin.";
+            }
             Destroy(go);
         }
 

@@ -24,7 +24,6 @@ is destroyed.
     TipScript tip;
     void OnCollisionEnter(Collision floor)
     {
-        Debug.Log("HEYYYAHHHH: " + this.gameObject.tag);
         floor.gameObject.GetComponent<TipScript>().SetTip("MISS! That object belonged in the " + this.gameObject.tag.Substring(0, this.gameObject.tag.Length-2) + " bin.");
        // Debug.Log("DIS: " + go.name);
         Destroy(gameObject, 2f);

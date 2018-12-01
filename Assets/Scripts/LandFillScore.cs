@@ -54,8 +54,43 @@ public class LandFillScore : MonoBehaviour {
         }
         else
         {
-            tip.text = "INCORRECT - That belonged in the " + go.tag.Substring(0, go.tag.Length - 2) + " bin.";
+            
+            if(go.tag.Contains("Compost"))
+            {
+                tip.text = "Food waste can go into the COMPOST bin in the Residential Dining Halls, University Student Union, and a limited number of other locations on campus. Ask in other areas on campus.";
+            }
+            else
+            {
+                string objectName = go.name;
+
+                switch (objectName)
+                {
+                    case "Water Bottle PREFAB(Clone)":
+                        tip.text = "Plastic water bottles are not biodegradable nor do they belong in landfills. After emptying contents, these items should be discarded in the MIXED RECYCLING bin. Switch to a reusable water bottle to reduce your waste!";
+                        break;
+                    case "SoupCan_PREFAB(Clone)":
+                        tip.text = "Metal containers are recyclable. Just make sure they are washed first if they were in contact with food.";
+                        break;
+                    case "PlasticSpoon_PREFAB(Clone)":
+                        tip.text = "Single-use plastic utensils cannot be composted because they are made out of inorganic materials like plastic. And don't be fooled: utensils made from \"bio - plastics\" are typically not compostable either. Bring your own reusable utensils to help reduce your waste!";
+                        break;
+                    case "Notepad_PREFAB(Clone)":
+                        tip.text = "Paper should be recycled.";
+                        break;
+                    case "coca_can(Clone)":
+                        tip.text = "Metal cannot be composted because it is made out of inorganic materials nor should they go in the landfill bin.These items should be discarded in the RECYCLING bin. ";
+                        break;
+                    case "Cardboardbox_PREFAB(Clone)":
+                        tip.text = "Cardboard is recyclable.";
+                        break;
+                }
+            }
+
+
+            //go.GetComponent<Collider>().isTrigger = false;
             Destroy(go);
+
+            //tip.text = "INCORRECT - That belonged in the " + go.tag.Substring(0, go.tag.Length - 2) + " bin.";
         }
 
     }

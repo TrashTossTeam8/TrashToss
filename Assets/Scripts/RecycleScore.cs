@@ -50,7 +50,42 @@ public class RecycleScore : MonoBehaviour {
         }
         else
         {
-            tip.text = "INCORRECT - That belonged in the " + go.tag.Substring(0, go.tag.Length - 2) + " bin.";
+            if (go.tag.Contains("Compost"))
+            {
+                tip.text = "Food waste can go into the COMPOST bin in the Residential Dining Halls, University Student Union, and a limited number of other locations on campus. Ask in other areas on campus.";
+            }
+            else
+            {
+                string objectName = go.name;
+
+                switch (objectName)
+                {
+                    case "Straw_PREFAB(Clone)":
+                        tip.text = "Straws cannot be composted because they are made out of inorganic materials like plastic. They also can't be recycled because they can damage recycling equipment.";
+                        break;
+                    case "Pizza_box_closed_PREFAB(Clone)":
+                        tip.text = "Soiled paper products cannot be processed in Composting or Recycling centers.";
+                        break;
+                    case "Pencil_PREFAB(Clone)":
+                        tip.text = "Pencils are not recyclable or compostable.";
+                        break;
+                    case "Pen_PREFAB(Clone)":
+                        tip.text = "Pens are not recyclable or compostable.";
+                        break;
+                    case "Ketchup_PREFAB(Clone)":
+                        tip.text = "Condiment packets cannot be composted because they are made out of inorganic materials like plastic. These items should be discarded in the LANDFILL bin. Refuse these items when ordering take-out food or take only as many packets as you actually need to help reduce waste.";
+                        break;
+                    case "Foil_PREFAB(Clone)":
+                        tip.text = "Foil cannot be composted because it is not biodegradable. It also should not go in the landfill bin. These items should be discarded in the RECYCLING bin. ";
+                        break;
+                    case "Chip_Bag(Clone)":
+                        tip.text = "Chip bags cannot be composted or recycled because they are made out of inorganic materials like plastic and aluminum. These items should be discarded in the LANDFILL bin.";
+                        break;
+                    case "Yogurt_PREFAB(Clone)":
+                        tip.text = "Single-use plastic containers cannot be composted because they are made out of inorganic materials.These items should be discarded in the LANDFILL bin. ";
+                        break;
+                }
+            }
             Destroy(go);
         }
 

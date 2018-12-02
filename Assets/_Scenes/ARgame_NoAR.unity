@@ -1675,11 +1675,11 @@ MonoBehaviour:
   spawnWaitTime: 2
   recyclableObjects:
   - {fileID: 1847522594714156, guid: febb5bd3000eef747b575c7cd76c1ad6, type: 2}
-  - {fileID: 0}
   - {fileID: 1589016594382580, guid: 8d8c9bc5a0cca0643beaa49ec4ace7bf, type: 2}
   - {fileID: 1623537251910738, guid: ec36b2dd73ffad04c82e3057cd075a27, type: 2}
   - {fileID: 1729624149814266, guid: 6cc084d156329214eb3ef61b8b22d002, type: 2}
   - {fileID: 1152225924532998, guid: de02926f735d20d429a8ea74ce9c3302, type: 2}
+  - {fileID: 1242833051966086, guid: 8537e2c222b1dba47b978c228ed5e70c, type: 2}
   compostObjects:
   - {fileID: 1783042872796322, guid: 34e4bd914ed3e1a45836cb0fa6d3c0f1, type: 2}
   - {fileID: 1369961512913478, guid: 5ec25fad66ceeb340a6b5ef2f396e93e, type: 2}
@@ -1696,10 +1696,10 @@ MonoBehaviour:
   - {fileID: 1862178959709290, guid: 0ffdc74439ecddf4e8cc142e875af54d, type: 2}
   - {fileID: 1105287732587774, guid: a9fcdc4c25627e945af665a6f4819127, type: 2}
   - {fileID: 1896875553311390, guid: 5c4b71116579a1643b2e7466cc83ee5b, type: 2}
-  - {fileID: 1275576143656730, guid: f8a82d8d11233e947a79e2a932ab8570, type: 2}
+  - {fileID: 1943088600083426, guid: f8a82d8d11233e947a79e2a932ab8570, type: 2}
   - {fileID: 1249805010350280, guid: f5bfc94138d8e134f96736f6fd08de5c, type: 2}
-  debugUseTester: 1
-  testTrash: {fileID: 1242833051966086, guid: 8537e2c222b1dba47b978c228ed5e70c, type: 2}
+  debugUseTester: 0
+  testTrash: {fileID: 1943088600083426, guid: f8a82d8d11233e947a79e2a932ab8570, type: 2}
   xMult: 1.6
   yMult: 3
   zMult: 1.4

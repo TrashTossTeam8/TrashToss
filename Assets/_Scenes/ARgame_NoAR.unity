@@ -1675,7 +1675,7 @@ MonoBehaviour:
   spawnWaitTime: 2
   recyclableObjects:
   - {fileID: 1847522594714156, guid: febb5bd3000eef747b575c7cd76c1ad6, type: 2}
-  - {fileID: 1382768708116474, guid: 517b92bfa88f2e844b4a94ac7f62b197, type: 2}
+  - {fileID: 0}
   - {fileID: 1589016594382580, guid: 8d8c9bc5a0cca0643beaa49ec4ace7bf, type: 2}
   - {fileID: 1623537251910738, guid: ec36b2dd73ffad04c82e3057cd075a27, type: 2}
   - {fileID: 1729624149814266, guid: 6cc084d156329214eb3ef61b8b22d002, type: 2}
@@ -1698,8 +1698,8 @@ MonoBehaviour:
   - {fileID: 1896875553311390, guid: 5c4b71116579a1643b2e7466cc83ee5b, type: 2}
   - {fileID: 1275576143656730, guid: f8a82d8d11233e947a79e2a932ab8570, type: 2}
   - {fileID: 1249805010350280, guid: f5bfc94138d8e134f96736f6fd08de5c, type: 2}
-  debugUseTester: 0
-  testTrash: {fileID: 1628078675167962, guid: 4485e156694d2f344b169bd924cd0827, type: 2}
+  debugUseTester: 1
+  testTrash: {fileID: 1242833051966086, guid: 8537e2c222b1dba47b978c228ed5e70c, type: 2}
   xMult: 1.6
   yMult: 3
   zMult: 1.4
@@ -1711,6 +1711,7 @@ MonoBehaviour:
   YaxisForce: 0
   ZaxisForce: 0
   isThrowing: 0
+  spinRight: 1
 --- !u!4 &1452835902
 Transform:
   m_ObjectHideFlags: 0

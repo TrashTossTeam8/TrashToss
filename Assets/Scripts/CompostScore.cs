@@ -36,6 +36,7 @@ public class CompostScore : MonoBehaviour {
     //Called when a waste object enters the collider within a waste bin
     void OnTriggerEnter(Collider trashObject)
     {
+        //go is the current GameObject being thrown
         GameObject go = (trashObject.attachedRigidbody) ? trashObject.attachedRigidbody.gameObject : trashObject.gameObject;
 
         //If the object has been sorted correctly
@@ -50,14 +51,17 @@ public class CompostScore : MonoBehaviour {
         }
         else
         {
+            //If the object is a compost item
             if (go.tag.Contains("Compost"))
             {
                 tip.text = "Food waste can go into the COMPOST bin in the Residential Dining Halls, University Student Union, and a limited number of other locations on campus. Ask in other areas on campus.";
             }
+            //If the object is not a compost item
             else
             {
                 tip.text = "Only food can potentially go in the compost bin at CSULB. No food containers can go in the compost bin.";
             }
+            //Destroy waste object being thrown
             Destroy(go);
         }
 

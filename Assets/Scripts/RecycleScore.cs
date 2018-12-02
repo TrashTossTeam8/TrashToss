@@ -50,14 +50,17 @@ public class RecycleScore : MonoBehaviour {
         }
         else
         {
+            //If the object is a compost item
             if (go.tag.Contains("Compost"))
             {
                 tip.text = "Food waste can go into the COMPOST bin in the Residential Dining Halls, University Student Union, and a limited number of other locations on campus. Ask in other areas on campus.";
             }
             else
             {
+                //Gets the name of the object
                 string objectName = go.name;
 
+                //Displays tip specific to the item if sorted into the wrong bin.
                 switch (objectName)
                 {
                     case "Straw_PREFAB(Clone)":
@@ -86,6 +89,7 @@ public class RecycleScore : MonoBehaviour {
                         break;
                 }
             }
+            //Destroy waste object being thrown
             Destroy(go);
         }
 

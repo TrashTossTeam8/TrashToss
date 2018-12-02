@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,7 +151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.8, y: 12.7}
+  m_AnchoredPosition: {x: 5.7998047, y: 12.700012}
   m_SizeDelta: {x: -32.5, y: -147.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334263304
@@ -186,10 +186,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: In this game, a random piece of trash will be given to you. Your job is
+  m_Text: 'In this game, a random piece of trash will be given to you. Your job is
     to correctly sort the waste into the correct bin. Landfill Waste goes in the black
     bin, Recyclables go in the blue bin, and Compost goes in the green bin. Try to
     get the highscore before time runs out!
+
+
+    When playing in AR mode, be sure to step close to initiate the game. Once the
+    game is initiated you may back up and play the game. You may rotate your camera
+    but keep the image target within your phone''s view.'
 --- !u!222 &334263305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -620,7 +625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.10003662, y: 270.4}
+  m_AnchoredPosition: {x: -0.099609375, y: 270.4}
   m_SizeDelta: {x: -20.7, y: -558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454420189

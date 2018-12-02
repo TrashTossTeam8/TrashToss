@@ -26,7 +26,6 @@ public class ARSpawnScript : MonoBehaviour
     // the trash object is directly referenced in the Unity engine 
     // through drag and drop
 
-
     //In this project, there are three types of waste: recyclables, compost, and landfill items.
     //These arrays hold the objects of each type.
     [Header("TrashObjects")]
@@ -83,6 +82,9 @@ public class ARSpawnScript : MonoBehaviour
     private bool isHoldingToThrow = false;
     public bool isThrowing = false;
 
+    //Determines the direction of the spin of the object when thrown.
+    public bool spinRight = true;
+
     /*
     This method is called when the game starts and is used to spawn a piece of
     trash for the player to sort at the begining of the game.
@@ -100,17 +102,27 @@ public class ARSpawnScript : MonoBehaviour
         spawnedObject = currentObject;
 
         Debug.Log("NAME: " + currentObject.name);
+
     }
 
     void Update()
     {
-
+        Debug.Log("BLOCK CALLED");
         // We detect if the trash object is thrown to not start the rotation too early
         if (isThrowing == true && spawnedObject != null)
         {
-            //Debug.Log("BLOCK CALLED");
-            // We do the rotation based on the value of Y and Z axes
-            spawnedObject.transform.Rotate(5f, YaxisForce, ZaxisForce);
+            if (spinRight)
+            {
+                // We do the rotation based on the value of Y and Z axes
+                spawnedObject.transform.Rotate(5f, YaxisForce * 2.5f, ZaxisForce);
+            }
+            else
+            {
+                // We do the rotation based on the value of Y and Z axes
+                spawnedObject.transform.Rotate(5f, YaxisForce * -2.5f, ZaxisForce);
+            }
+
+
         }
     }
 
@@ -259,9 +271,19 @@ public class ARSpawnScript : MonoBehaviour
         float xDelta = (endPos.x - startPos.x) / Screen.width;
         float yDelta = (endPos.y - startPos.y) / Screen.height;
 
+        //Determines the direction of the swipe
+        if (endPos.x < startPos.x)
+        {
+            spinRight = true;
+        }
+        else
+        {
+            spinRight = false;
+        }
+
         //Calculating the force along each axis by comparing starting and ending values of time and finger position
-        float XaxisForce = (xDelta * xMult);
-        float YaxisForce = (yDelta * yMult);
+        XaxisForce = (xDelta * xMult);
+        YaxisForce = (yDelta * yMult);
 
         //Gets the position of the camera
         Vector3 cameraPos = Camera.main.transform.position;
@@ -311,6 +333,7 @@ public class ARSpawnScript : MonoBehaviour
     IEnumerator CoWaitToSpawnTrash(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+
         currentObject = SpawnTrash();
     }
 

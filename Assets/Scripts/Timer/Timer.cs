@@ -79,6 +79,9 @@ public class Timer : MonoBehaviour
             OnTimerComplete();
             OnTimeFinished.Invoke();
 
+            //Makes note of the scene that is loading before we go to the leaderboard. This is important to be sure that users only see certain
+            //UI elements if they came from the game and not the main menu.
+            Indestructable.instance.prevScene = Application.loadedLevel;
             //Sends the user to the leaderboard page
             Application.LoadLevel("Leaderboard");
         }

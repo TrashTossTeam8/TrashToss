@@ -16,6 +16,9 @@ public class GameManagment : MonoBehaviour {
     public static GameManagment instance;
 
     bool isMute;
+    
+
+    public Indestructable ind;
 
     /*
     This method is used for the mute buton 
@@ -49,7 +52,8 @@ This Method is used to take the user to the LeaderBoard
 */ 
 	public void OnLeaderboardButtonPress()
 	{
-		Application.LoadLevel("Leaderboard");
+        Indestructable.instance.prevScene = Application.loadedLevel;
+        Application.LoadLevel("Leaderboard");
 	}
 
 /*

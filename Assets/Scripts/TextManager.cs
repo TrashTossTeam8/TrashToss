@@ -27,6 +27,12 @@ public class TextManager : MonoBehaviour
     //References the DisplayHighscoresScript
     DisplayHighScores highscoresDisplay;
 
+    //If gameOver is false, the user has not yet played a game and should not see the input field on the leaderboard
+    bool gameOver = false;
+
+    //Parts of the UI that allow user to input names on the leaderboard. These should not always be visible.
+    public CanvasGroup inputUIElements;
+
     //Gets the display for the highscores
     private void Awake()
     {
@@ -36,7 +42,22 @@ public class TextManager : MonoBehaviour
     //Downloads the highscores
     void Start()
     {
+        //Gets the scene that was loaded previously. This is so that when the leaderboard is loaded its known whether or not the player has just played a game
+        //or is just looking at the leaderboard. This is important to be sure that people who haven't played the game can't add their name to it.
+        int prevLevel = Indestructable.instance.prevScene;
+        
+        //Field to enter names
         initialsField = inputField.GetComponent<InputField>();
+
+        //If the user accessed the leaderboard without finishing the game, don't show them the UI for adding a name to the leaderboard.
+        if(prevLevel == 2)
+        {
+            HideInput();
+        }
+        else
+        {
+            UnHideInput();
+        }
         DownloadHighScores();
     }
 
@@ -46,6 +67,18 @@ public class TextManager : MonoBehaviour
         string name = initialsField.text;
         int score = GameScore.playerScore;
         AddNewHighscore(name, score);
+    }
+
+    //Hide the input box for the leaderboard
+    public void HideInput()
+    {
+        inputUIElements.alpha = 0f;
+    }
+
+    //Reveal the input box for the leaderboard
+    public void UnHideInput()
+    {
+        inputUIElements.alpha = 1f;
     }
 
     //Adds a new highscore

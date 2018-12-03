@@ -48,5 +48,6 @@ public class TipScript : MonoBehaviour {
     public void SetTip(String input)
     {
         tip.text = input;
+        tip.fontSize = 20;
     }
 }

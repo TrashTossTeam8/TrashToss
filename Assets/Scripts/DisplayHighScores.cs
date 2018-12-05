@@ -29,7 +29,6 @@ public class DisplayHighScores : MonoBehaviour {
             for (int x = 0; x < highscoreList.Length; x++)
             {
                 //Lists each name on its own column on the leaderboard
-                Debug.Log(highscoreList[x].username + highscoreList[x].score);
                 highscoreText.text = highscoreText.text + (x + 1) + ". " + highscoreList[x].username.Replace('+',' ') + ": " + highscoreList[x].score + "\n";
             }
         }

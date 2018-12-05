@@ -12,7 +12,7 @@ type of trash spawned. This way the player does not always start
 the game sorting trash that is recyclable. 
 */
 
-public class ARSpawnScript : MonoBehaviour
+public class SpawnAndThrowScript : MonoBehaviour
 {
 
     //This is the object that represents the image target that all game assets are relative to. The 

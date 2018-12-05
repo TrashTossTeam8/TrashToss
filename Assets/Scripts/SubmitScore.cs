@@ -20,6 +20,7 @@ public class SubmitScore : MonoBehaviour {
         submit();
     }
 
+    //Submit score to leaderboard
     public void submit()
     {
         highScores.AddNewHighscore(name, score);

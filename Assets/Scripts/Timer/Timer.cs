@@ -47,11 +47,13 @@ public class Timer : MonoBehaviour
         bool done = false;
         while (!done)
         {
+            //If time runs out
             if(!enabled)
             {
                 yield return null;
             }
 
+            //Counter
             frameCount++;
             if (currentTime < 0f)
             {
@@ -60,13 +62,7 @@ public class Timer : MonoBehaviour
             currentTime -= Time.deltaTime;
 
             OnTimerUpdate(currentTime);
-
-            //Tell the TipScript to display a new tip every ten seconds
-            if (timerDuration % 10 == 0)
-            {
-                //tScript.GetTip();
-            }
-            //yield return new WaitForSeconds(1);
+            
             
             yield return null;
         }
@@ -75,7 +71,6 @@ public class Timer : MonoBehaviour
         {
             //Calsl the Lose Time function
             StopCoroutine("LoseTime");
-            //countdownText.text = "Times Up!";
             OnTimerComplete();
             OnTimeFinished.Invoke();
 
